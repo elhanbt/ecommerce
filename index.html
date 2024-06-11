@@ -1,0 +1,558 @@
+<html>
+<head>
+    <title>Bycart</title>
+    <link rel="icon" href="Assets/logo.svg" type="image/x-icon">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css">
+    <style>
+    @font-face{
+        font-family: "Montserrat-semibold";
+        src: url("Assets/fonts/woff_woff2/Montserrat-SemiBold.woff") format('woff'),
+        url("Assets/fonts/woff_woff2/Montserrat-SemiBold.woff2") format('woff2');
+    }
+    @font-face{
+        font-family: "Montserrat-medium";
+        src: url("Assets/fonts/woff_woff2/Montserrat-Medium.woff") format('woff'),
+        url("Assets/fonts/woff_woff2/Montserrat-Medium.woff2") format('woff2');
+    }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+    
+    
+    <div id="dropdownwrapper">
+        <div class="dropdown">
+            <a href=""  class="dropdown_content">
+                <div style="display: flex;"><span class="dropdown_icons"><img src="Assets/account.svg" alt="accounticon"></span> <span> Profile</span></div>
+                <span class="dropdown_icons"><img src="Assets/angular_bracket.svg" alt="arrow"></span>
+            </a>
+
+            <a href=""  class="dropdown_content">
+                <div style="display: flex;"><span class="dropdown_icons"><img src="Assets/truck_icon.svg" alt="truck icon"></span> <span> My address</span></div>
+                <span class="dropdown_icons"><img src="Assets/angular_bracket.svg" alt="arrow"></span>
+            </a>
+
+            <a href=""  class="dropdown_content">
+                <div style="display: flex;"><span class="dropdown_icons"><img src="Assets/cart.svg" alt="acart icon"></span> <span> My orders</span></div>
+                <span class="dropdown_icons"><img src="Assets/angular_bracket.svg" alt="arrow"></span>
+            </a>
+
+            <a href=""  class="dropdown_content">
+                <div style="display: flex;"><span class="dropdown_icons"><img src="Assets/notification_icon.svg" alt="notification icon"></span> <span>Notification</span></div>
+                <span class="dropdown_icons"><img src="Assets/angular_bracket.svg" alt="arrow"></span>
+            </a>
+
+            <a href="login.html"  class="dropdown_content">
+                <div style="display: flex;"><span class="dropdown_icons"><img src="Assets/logout_icon.svg" alt="logout icon"></span> <span>Logout</span></div>
+                <span class="dropdown_icons"><img src="Assets/angular_bracket.svg" alt="arrow"></span>
+            </a>
+        </div>
+    </div>
+     <!--Header-->
+     <div class="header">
+            
+        <!--header left part-->
+        <div class="logo_searchbar">
+            <h1><a href=""><img src="Assets/logo.svg" alt="logo"/></a></h1>        <!--LOGO-->
+            <div class="search">
+                <span><img src="Assets/search.svg" alt="search icon"/></span>
+                <input type="text" name="search" placeholder="Search products">
+            </div>
+        </div>
+
+        <!--header right part-->
+        <div class="links">
+            <a href="">
+                <span><img src="Assets/wishlist.svg" alt="wishlist icon"/></span>
+                Wishlist
+            </a>
+            <a href="cart.html">
+                <span><img src="Assets/cart.svg" alt="cart icon"/></span>
+                Cart
+            </a>
+            <a onclick="dropdown()" style="align-items: center;">
+                <span><img src="Assets/account.svg" alt="account icon"></span>
+                Elhan B Thomas
+                <span style="margin-left: 10px;margin-right: 0px; width: 15px;"><img src="Assets/dropdown_arrow.svg" alt="dropdown arroe"></span>
+            </a >
+        </div>
+    </div>
+
+    <div class="section_wrapper">              
+
+        <!--Slider-->
+        <div class="slider">
+            <div>                 <!--Watch--> 
+                <div class="watchtext">
+                    <span style="display: inline-block;width: 110px;"><img src="Assets/sonata.svg" alt="sonata logo"/></span>
+                    <span style="color:#A1947F; font-size: 25px; margin-top: 35px;">Light leather</span>
+                    <span style="color: #986F30; font-size: 45px; font-family: 'Montserrat-medium';margin-top: 10px;">#On Trend</span>
+                    <span style="font-size: 11pt; color: #B0ABA3; display: inline-block; width: 74%; margin-top: 20px;">"Capture every moment in timeless style with our elegant timepieces. Embrace sophistication and never miss a beat with our exquisitely crafted watches."</span>
+                    <div style="color: #737373; font-size: 11pt; margin-top: 35px;">
+                        <span>This summer, stay on trend with</span> <span style="font-family: 'Montserrat-semibold';"> #Light leather</span>
+                    </div>
+                    <span style="color: #737373; font-size: 11pt;">A minimalist design</span>
+                </div>
+                
+                <div><img src="Assets/george_jenson.png" alt="watch"/></div>
+            </div>
+            
+            <div>
+                <div class="niketext">          <!--Shoes-->
+                    <span style="font-size: 16pt;color: #e9e6e6f2;">New Arrival</span>
+                    <div style="font-family:'Montserrat-semibold';font-size: 32pt; margin-top: 10px;">
+                        <span style="color: white;">SPECIAL</span> <span>COLLECTIONS</span>
+                    </div>
+                    <span style="color:#e9e6e6f2;font-size: 14pt;margin-top: 35px;display: inline-block;width: 45%;">"Eperience unparalleled quality and timeless elegance with our meticulously designed footwear range."</span>
+                    <div style="margin-top: 35px;;">
+                        <span style="color: white;font-size: 17pt;">Offer for every purchase</span> <span style="color: white;font-size: 45pt;font-family: 'Montserrat-semibold'; ">@2,499/-</span><span style="color: white;font-size: 7pt;">*TC</span>
+                    </div>
+                </div>
+                <div><img src="Assets/nike.png" alt="nike shoes"></div>
+            </div>
+            
+            <div>
+                <div class="sonytext">
+                    <span style="display: inline-block;width: 240px;"><img src="Assets/sony.svg" alt="sony logo"></span>
+                    <span style="color:#737373;font-size: 17pt;margin-top: 45px; ">Where words fail</span>
+                    <span style="font-family: 'Montserrat-semibold';color:#027498;font-size: 35pt;margin-top: 30px;">Music speaks</span>
+                    <div style="margin-top: 20px;">
+                        <span style="color: #07d5d578;font-size: 12pt;;">Shop now</span> <span style="font-family: 'Montserrat-medium';color:#737373 ;font-size: 18pt;">in Just @1999/-</span>
+                    </div>
+                </div>
+                <div><img src="Assets/sony_headphone.png" alt="sony speakers"></div>
+            </div>
+        </div>
+        <!--Slider script (Slick Carousal)-->
+        <script 
+            src="https://code.jquery.com/jquery-3.7.1.min.js" 
+            integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" 
+            crossorigin="anonymous">
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js" type="text/javascript"></script>
+        <script src="script.js"> </script>
+
+        <!--Product images (1st row)-->
+        <div class="scrolling_imgs">
+            <div>
+                <div class="img_container"><img src="Assets/fashion.png" alt="fashion"/></div>
+                <div class="img_caption">Fashion</div>
+            </div>
+
+            <div>
+                <div class="img_container"><img src="Assets/mobile.png" alt="mobiles"/></div>
+                <div class="img_caption">Mobile</div>
+            </div>
+
+            <div>
+                <div class="img_container"><img src="Assets/garden.png" alt="plant"/></div>
+                <div class="img_caption">Garden</div>
+            </div>
+
+            <div>
+                <div class="img_container"><img src="Assets/beauty.png" alt="Cometics"/></div>
+                <div class="img_caption">Beauty</div>
+            </div>
+
+            <div>
+                <div class="img_container"><img src="Assets/fitness.png" alt="Dumbells"/></div>
+                <div class="img_caption">Fitness</div>
+            </div>
+
+            <div>
+                <div class="img_container"><img src="Assets/dress.png" alt="T-shirts"/></div>
+                <div class="img_caption">Dress</div>
+            </div>
+
+            <div>
+                <div class="img_container"><img src="Assets/books.png" alt="books"/></div>
+                <div class="img_caption">Books</div>
+            </div>
+
+            <div>
+                <div class="img_container"><img src="Assets/furniture.png" alt="furniture"/></div>
+                <div class="img_caption">Furniture</div>
+            </div>
+
+            <div>
+                <div class="img_container"><img src="Assets/electronics.png" alt="electronic gadgets"/></div>
+                <div class="img_caption">Electronics</div>
+            </div>
+        </div>
+
+        <div style="font-size: 16pt; margin-top: 60px; font-family: 'Montserrat-medium';">Fashion deals for you</div>
+
+        <!--Product images (2nd row)-->
+        <div class="scrolling_imgs">
+            <div class="img_txt_container">
+                <span><img class="like_icon" src="Assets/like_icon.svg" alt="like"></span>
+                <div class="img_container2"><img src="Assets/soleluxe.png" alt="shoe"/></div>
+                <div class="img_caption2">
+                    <span style="color: #41413F; font-size: 15pt; font-family: 'Montserrat-medium';">Sole Luxe</span><br/>
+                    <span style="font-size: 11pt; color: #7B7B75;">Wear a comfort zone</span>
+                </div>
+            </div>
+
+            <div class="img_txt_container">
+                <span><img class="like_icon" src="Assets/like_icon.svg" alt="like"></span>
+                <div class="img_container2"><img src="Assets/gems.png" alt="gemstone"/></div>
+                <div class="img_caption2">
+                    <span style="color: #41413F; font-size: 15pt; font-family: 'Montserrat-medium';">Radiant gems</span><br/>
+                    <span style="font-size: 11pt; color: #7B7B75;">Adorn yorself with brilliance</span>
+                </div>
+            </div>
+
+            <div class="img_txt_container">
+                <span><img class="like_icon" src="Assets/like_icon.svg" alt="like"></span>
+                <div class="img_container2"><img src="Assets/tailoredstitch.png" alt="t-shirt"/></div>
+                <div class="img_caption2">
+                    <span style="color: #41413F; font-size: 15pt; font-family: 'Montserrat-medium';">Tailored stitch</span><br/>
+                    <span style="font-size: 11pt; color: #7B7B75;">Style speaks volume</span>
+                </div>
+            </div>
+
+            <div class="img_txt_container">
+                <span><img class="like_icon" src="Assets/like_icon.svg" alt="like"></span>
+                <div class="img_container2"><img src="Assets/soleluxe.png" alt="shoe"/></div>
+                <div class="img_caption2">
+                    <span style="color: #41413F; font-size: 15pt; font-family: 'Montserrat-medium';">Sole Luxe</span><br/>
+                    <span style="font-size: 11pt; color: #7B7B75;">Wear a comfort zone</span>
+                </div>
+            </div>
+
+            <div class="img_txt_container">
+                <span><img class="like_icon" src="Assets/like_icon.svg" alt="like"></span>
+                <div class="img_container2"><img src="Assets/tailoredstitch.png" alt="t-shirt"/></div>
+                <div class="img_caption2">
+                    <span style="color: #41413F; font-size: 15pt; font-family: 'Montserrat-medium';">Tailored stitch</span><br/>
+                    <span style="font-size: 11pt; color: #7B7B75;">Style speaks volume</span>
+                </div>
+            </div>
+
+        </div>
+
+        <!--JBL Speaker-->
+        <div style="margin-top: 60px;position: relative;">
+            <div><img src="Assets/jbl.png" alt="jbl speaker"/></div>
+            <div class="jbltext">
+                <span style="font-family: 'Montserrat-semibold'; font-size: 29pt;">Party Without Tickets</span>
+                <span style="font-size: 20pt;margin-top: 30px;font-weight: 400;">Wireless bluetooth</span>
+                <span style="color: #7C7A7A;font-weight: 400; display: inline-block;width: 47%;font-size: 14pt;margin-top: 15px;">You can make your music amazing by customising the light sequences and easily adjust your settings with the JBL Connect app</span>
+                <div style="margin-top: 35px;">    
+                    <span style="font-size: 20pt;">Starting</span> <span style="font-size: 45pt;font-family: 'Montserrat-semibold';">@2,499/-</span>
+                </div>
+            </div>
+        </div>
+
+        <div style="font-size: 16pt; margin-top: 60px; font-family: 'Montserrat-medium';">Special deals for you</div>
+
+        <!--Scrolling images (row 3)-->
+        <div class="scrolling_imgs">
+            <div class="img_txt_container">
+                <span><img class="like_icon" src="Assets/like_icon.svg" alt="like"></span>
+                <div class="img_container2"><img src="Assets/ikea.png" alt="ikea furniture"/></div>
+                <div class="img_caption2">
+                    <span style="color: #41413F; font-size: 15pt; font-family: 'Montserrat-medium';">IKEA</span><br/>
+                    <span style="font-size: 11pt; color: #7B7B75;">"Transform your space, elevate your living."</span><br/>
+                    <span style="font-size: 15pt; color: #41413F;font-family: 'Montserrat-medium';">Lets order - 10% offer for all products</span>
+                </div>
+            </div>
+
+            <div class="img_txt_container">
+                <span><img class="like_icon" src="Assets/like_icon.svg" alt="like"></span>
+                <div class="img_container2"><img src="Assets/marshal.png" alt="marshal speaker"/></div>
+                <div class="img_caption2">
+                    <span style="color: #41413F; font-size: 15pt; font-family: 'Montserrat-medium';">Marshal</span><br/>
+                    <span style="font-size: 11pt; color: #7B7B75;">Sound revolution</span><br/>
+                    <span style="font-size: 15pt; color: #41413F;font-family: 'Montserrat-medium';">Grab your special offer now...</span>
+                </div>
+            </div>
+
+            <div class="img_txt_container">
+                <span><img class="like_icon" src="Assets/like_icon.svg" alt="like"></span>
+                <div class="img_container2"><img src="Assets/denver.png" alt="denver perfume"/></div>
+                <div class="img_caption2">
+                    <span style="color: #41413F; font-size: 15pt; font-family: 'Montserrat-medium';">Denver</span><br/>
+                    <span style="font-size: 11pt; color: #7B7B75;">Feel yor fragrance</span><br/>
+                    <span style="font-size: 15pt; color: #41413F;font-family: 'Montserrat-medium';">75% off for all premium members</span>
+                </div>
+            </div>
+
+            <div class="img_txt_container">
+                <span><img class="like_icon" src="Assets/like_icon.svg" alt="like"></span>
+                <div class="img_container2"><img src="Assets/marshal.png" alt="marshal speaker"/></div>
+                <div class="img_caption2">
+                    <span style="color: #41413F; font-size: 15pt; font-family: 'Montserrat-medium';">Marshal</span><br/>
+                    <span style="font-size: 11pt; color: #7B7B75;">Sound revolution</span><br/>
+                    <span style="font-size: 15pt; color: #41413F;font-family: 'Montserrat-medium';;">Grab your special offer now...</span>
+                </div>
+            </div>
+
+            <div class="img_txt_container">
+                <span><img class="like_icon" src="Assets/like_icon.svg" alt="like"></span>
+                <div class="img_container2"><img src="Assets/ikea.png" alt="ikea furniture"/></div>
+                <div class="img_caption2">
+                    <span style="color: #41413F; font-size: 15pt; font-family: 'Montserrat-medium';">IKEA</span><br/>
+                    <span style="font-size: 11pt; color: #7B7B75;">"Transform your space, elevate your living."</span><br/>
+                    <span style="font-size: 15pt; color: #41413F;font-family: 'Montserrat-medium';">Lets order - 10% offer for all products</span>
+                </div>
+            </div>
+        </div>
+
+        <!--Helmet and decor-->
+        <div  style="display: flex;margin-top: 60px; gap: 10px;">
+            <div style="position: relative;">
+                <div><img src="Assets/helmet.png" alt="helmet"/></div>
+                <div  class="text_container" style="background-color: #FFFFFF26;">
+                    <span>40% offer for all helmets</span>
+                    <div style="display: flex; gap: 5px;"><span>Explore</span><span><img src="Assets/arrow-right.svg" alt="right arrow icon"></span></div>
+                </div>
+            </div>
+            <div>
+                <div style="position: relative;">
+                    <div><img src="Assets/decor.png" alt="decorations"></div>
+                    <div  class="text_container" style="background-color: #00000059;">
+                        <span>60% offer for wall decor products</span>
+                        <div style="display: flex; gap: 5px;"><span>Explore</span><span><img src="Assets/arrow-right.svg" alt="right arrow icon"></span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--The Tailored Thread-->
+        <div style="margin-top: 60px;position: relative;">
+            <div class="tailoredthread_text">
+                <div style="display: flex; align-items: center; gap: 10px; width: fit-content;">
+                    <span style="width: 80px;"><img src="Assets/tailoredthread_logo.svg" alt="Tailored thread logo"></span>
+                    <span style="font-size: 26pt; color: white;">The Tailored Thread</span>
+                </div>
+                <div style="color: #767575; font-family: 'Montserrat-medium';font-size: 19pt;margin-top: 100px;width: 60%;line-height: 35px;">"Elegance <span style="color: white;">tailored</span> for every occasion Where <span style="color: white;">sophistication</span> meets style"</div>
+                <div style="margin-top: 30px;"><span style="color:#767575 ;font-size: 18pt;">Just</span> <span style="color: white;font-size: 45pt;font-family: 'Montserrat-semibold';">@4,999/-</span></div>
+            </div>
+            <div><img src="Assets/tailoredthread.png" alt="The Tailored Thread" style="border-radius: 25px;"/></div>
+        </div>
+        
+        <!--Scrolling imgs (Row 4)-->
+        <div class="scrolling_imgs">
+            <div class="img_txt_container">
+                <span><img class="like_icon" src="Assets/like_icon.svg" alt="like"></span>
+                <div class="img_container2"><img src="Assets/jacket.png" alt="ikea furniture"/></div>
+                <div class="img_caption2">
+                    <div style="display: flex; align-items: center; justify-content: space-between;">
+                        <span style="color: #41413F;font-size: 15pt;font-family: 'Montserrat-medium';">Riding Jacket</span>
+                        <div style="display: flex;" class="star_container">
+                            <span><img src="Assets/star_full.svg" alt="star"/></span>
+                            <span><img src="Assets/star_full.svg" alt="star"/></span>
+                            <span><img src="Assets/star_full.svg" alt="star"/></span>
+                            <span><img src="Assets/star_full.svg" alt="star"/></span>
+                            <span><img src="Assets/star_half.svg" alt="star"></span>
+                        </div>
+                    </div>
+                    <span  style="font-size: 11pt; color: #7B7B75;">4.5 Star rating from user's</span><br/>
+                    <span style="color: #DFDFD6;font-size: 10pt;">Let's start your journey safe</span>
+                </div>
+            </div>
+
+            <div class="img_txt_container">
+                <span><img class="like_icon" src="Assets/like_icon.svg" alt="like"></span>
+                <div class="img_container2"><img src="Assets/mouse.png" alt="ikea furniture"/></div>
+                <div class="img_caption2">
+                    <div style="display: flex; align-items: center; justify-content: space-between;">
+                        <span style="color: #41413F;font-size: 15pt;font-family: 'Montserrat-medium';">Rat Mouse</span>
+                        <div style="display: flex;" class="star_container">
+                            <span><img src="Assets/star_full.svg" alt="star"/></span>
+                            <span><img src="Assets/star_full.svg" alt="star"/></span>
+                            <span><img src="Assets/star_full.svg" alt="star"/></span>
+                            <span><img src="Assets/star_none.svg" alt="star"/></span>
+                            <span><img src="Assets/star_none.svg" alt="star"></span>
+                        </div>
+                    </div>
+                    <span  style="font-size: 11pt; color: #7B7B75;">3 Star rating within 4 days from customer's</span><br/>
+                    <span style="color: #DFDFD6;font-size: 10pt;">Move with a feel</span>
+                </div>
+            </div>
+
+            <div class="img_txt_container">
+                <span><img class="like_icon" src="Assets/like_icon.svg" alt="like"></span>
+                <div class="img_container2"><img src="Assets/bottle.png" alt="ikea furniture"/></div>
+                <div class="img_caption2">
+                    <div style="display: flex; align-items: center; justify-content: space-between;">
+                        <span style="color: #41413F;font-size: 15pt;font-family: 'Montserrat-medium';">Water Bottle</span>
+                        <div style="display: flex;" class="star_container">
+                            <span><img src="Assets/star_full.svg" alt="star"/></span>
+                            <span><img src="Assets/star_full.svg" alt="star"/></span>
+                            <span><img src="Assets/star_full.svg" alt="star"/></span>
+                            <span><img src="Assets/star_full.svg" alt="star"/></span>
+                            <span><img src="Assets/star_full.svg" alt="star"></span>
+                        </div>
+                    </div>
+                    <span  style="font-size: 11pt; color: #7B7B75;">5 star rating from customer's</span><br/>
+                    <span style="color: #DFDFD6;font-size: 10pt;">Drink and have a healthy life</span>
+                </div>
+            </div>
+
+            <div class="img_txt_container">
+                <span><img class="like_icon" src="Assets/like_icon.svg" alt="like"></span>
+                <div class="img_container2"><img src="Assets/jacket.png" alt="ikea furniture"/></div>
+                <div class="img_caption2">
+                    <div style="display: flex; align-items: center; justify-content: space-between;">
+                        <span style="color: #41413F;font-size: 15pt;font-family: 'Montserrat-medium';">Riding Jacket</span>
+                        <div style="display: flex;" class="star_container">
+                            <span><img src="Assets/star_full.svg" alt="star"/></span>
+                            <span><img src="Assets/star_full.svg" alt="star"/></span>
+                            <span><img src="Assets/star_full.svg" alt="star"/></span>
+                            <span><img src="Assets/star_full.svg" alt="star"/></span>
+                            <span><img src="Assets/star_half.svg" alt="star"></span>
+                        </div>
+                    </div>
+                    <span  style="font-size: 11pt; color: #7B7B75;">4.5 star rating from user's</span><br/>
+                    <span style="color: #DFDFD6;font-size: 10pt;">Let's start your journey safe</span>
+                </div>
+            </div>
+
+            <div class="img_txt_container">
+                <span><img class="like_icon" src="Assets/like_icon.svg" alt="like"></span>
+                <div class="img_container2"><img src="Assets/mouse.png" alt="ikea furniture"/></div>
+                <div class="img_caption2">
+                    <div style="display: flex; align-items: center; justify-content: space-between;">
+                        <span style="color: #41413F;font-size: 15pt;font-family: 'Montserrat-medium';">Rat Mouse</span>
+                        <div style="display: flex;" class="star_container">
+                            <span><img src="Assets/star_full.svg" alt="star"/></span>
+                            <span><img src="Assets/star_full.svg" alt="star"/></span>
+                            <span><img src="Assets/star_full.svg" alt="star"/></span>
+                            <span><img src="Assets/star_none.svg" alt="star"/></span>
+                            <span><img src="Assets/star_none.svg" alt="star"></span>
+                        </div>
+                    </div>
+                    <span  style="font-size: 11pt; color: #7B7B75;">3 Star rating within 4 days from customer's</span><br/>
+                    <span style="color: #DFDFD6;font-size: 10pt;">Move with a feel</span>
+                </div>
+            </div>
+        </div>
+
+        <!--Last set of images-->
+        <table>
+            <tr>
+                <td colspan="2">
+                    <div><img src="Assets/american_tourister.png" alt="American Tourister" style="border-radius: 15px;"/></div>
+                    <div class="americantourister1">
+                        <div style="width: 25%;"><img src="Assets/american_tourister_logo.svg" alt="American Tourister logo"></div style="width: 20%;">
+                        <div style="font-size: 35pt;font-family: 'Montserrat-medium';color: white;margin-top: 30px;">&ldquo;Travel&rdquo;</div>
+                        <div style="color: white; width: 60%;line-height: 30px; margin-top: 10px;">"Embark on your journey with confidence, wherever the road may lead."</div>
+                    </div>
+                    <div class="americantourister2">View more <span><img src="Assets/arrow-right-black.svg" alt="right arrow"></span></div>
+                </td> 
+                
+                <td rowspan="2">
+                    <div><img src="Assets/Fashion_big.png" alt="Fashion"  style="border-radius: 15px;"/></div>
+                    <div class="fashion1">"Dream in elegance, Radiate in sophistication Embrace your moment in every stitch."</div>
+                   <div class="fashion2">Explore <span><img src="Assets/arrow-right-black.svg" alt="arrow right"></span></div>
+                </td>
+
+            </tr>
+            <tr>
+                <td>
+                    <div><img src="Assets/rayban.png" alt="Rayban"  style="border-radius: 15px;"/></div>
+                    <div class="rayban">See the world through a lense of luxury</div>
+                </td>
+                <td>
+                    <div><img src="Assets/cannon.png" alt="Cannon Camera"  style="border-radius: 15px;"/></div>
+                    <div class="cannon">See list <span><img src="Assets/arrow-right-black.svg" alt="right arrow"></span></div>
+                </td>
+            </tr>
+        </table>
+        
+    
+        <div style="color: #2D2D2C;border-bottom: solid 0.5px #ecece9; font-size: 16pt; font-family: 'Montserrat-medium';padding-bottom: 5px; ">More about Bycart</div>
+        
+        <div class="titles">Buycart : The best products shopping at your handset</div>
+        <div class="contents">"At Buycart, excellence is not just a promise; it's our standard. From superior craftsmanship to unmatched performance, we offer only the best products, curated to exceed your expectations. Experience the pinnacle of quality with our selection today."</div>
+
+        <div class="titles">Let's explore the best and perfect dresses sale by Buycart</div>
+        <div class="contents">"Ready to elevate your wardrobe? Explore our curated collection of the finest dresses designed to make every moment memorable. From timeless classics to the latest fashion trends, we offer a range of styles to suit every taste and occasion. Indulge in luxurious fabrics, impeccable craftsmanship, and attention to detail that sets our dresses apart. Shop now and discover the perfect ensemble to express your unique sense of style and make a statement wherever you go. Let's make every day extraordinary with the best dresses that reflect your individuality."</div>
+
+        <div class="titles">Purchase the latest products by Buycart</div>
+        <div class="contents">"Discover the pinnacle of innovation with our latest product lineup, curated to elevate your lifestyle. From cutting-edge gadgets to sleek accessories, we offer a range of premium items designed to enhance every aspect of your daily routine. Stay ahead of the curve and indulge in the newest advancements in technology, fashion, and beyond. With our commitment to quality and trendsetting design, you can trust that each purchase is a statement of sophistication and modernity. Embrace the future today and redefine what it means to live in style with our unparalleled selection of the latest products."</div>
+
+        <div class="titles">Buycart is the place to get best home decor products “Let's start to purchase”</div>
+        <div class="contents">"Transform your living space with our curated selection of home decor products, designed to elevate every corner of your home. From statement pieces to subtle accents, discover timeless elegance and contemporary flair tailored to your unique taste. Embrace a new era of comfort and style, where every detail reflects your personal sanctuary."</div>
+        
+        <div class="titles">Don't miss the offer : Buycart starts the best selling now! Grab the best deal now!!!</div>
+        <div class="contents">"Don't miss the shopping event of the season! Dive into a world of unbeatable deals and exclusive offers, where every click unlocks a treasure trove of savings. From fashion to electronics, home decor to beauty essentials, our curated selection has something for everyone. Shop with confidence knowing you're getting the best prices on the hottest items, but hurry, these deals won't last long! Embrace the thrill of discovery and make your wis-list a reality today."</div>
+
+        <div class="titles">Online shopping</div>
+        <div class="contents">Mega blockbuster sale | Shop now</div>
+
+        <div class="titles">Home & Living</div>
+        <div class="contents">Curtains & Sheets | Cotton bedsheets | Decorative items | Blankets | Yoga mats | Bean bags | Single bed sheets | Cushions | Face towels</div>
+
+        <div class="titles">Dresses</div>
+        <div class="contents">Men's shirt | Men's T-shirt | Pants for men | Looseshirt for men | Men's dhoti kurtas | Men velvet sherwanis | Women's t shirt | Kurtis | Churidar | Pants | Long top for women | Pencil skirt | Printed leggins | Ankle length leggins | Designer gown</div>
+
+        <div class="titles">Electronic accessories</div>
+        <div class="contents">Android smart watch | On ear headphones | Bluetooth speakers | CCTV Camera | Spy camera | Keyboard | Laptop bag | Mouse | Laptop accessories | Pendrive | Mobile holders | Car mobile holders | VR Box | Memory card | Microphone | Fast charging power banks | Mobile charger </div>
+
+        <div class="titles">Home & Kitchen</div>
+        <div class="contents">Toaster | Mixer grinder | Cooker | Juicer | Food processors | Roti maker | Sandwich maker | Kettle | Table cover | Kitchen towel | Racks & holders | Water bottle | Measuring cups | Spoons | Icecream scoops | Kitchen scissors</div>
+
+        <div class="titles">Personal care & Wellness</div>
+        <div class="contents">Tummy trimmers | Makeup kits | Hair colour | Hair steamer | Hair care | Oral care| Beard oil | Deodorants | Eye lenses | Soap | Oximeter | Bb cream | Body scrub | Olive oil | Talcum powder | Compact | Nail cutter | Lip balm</div>
+        
+  
+    </div>
+
+
+
+    <script src="script2.js"></script>
+
+
+    <!--Footer-->
+    <div class="footer">
+        
+        <!--footer left-->
+        <div style="width: 45%;">
+            <div style="display: flex; align-items: center;gap: 5px;">
+                <h1 style="margin: 0px;"><a href=""><img src="Assets/logo2.svg" alt="logo"/></a></h1>
+                <span class="footer_titles">Shop the best products</span>
+            </div>
+            
+            <div style="font-size: 11pt; width: 57%; margin-top: 15px;">"Discover excellence with every purchase - shop the best products curated just for you."</div>
+            
+            <div style="display: flex; width: 60%; margin-top: 60px; gap: 10px;">
+                <a href=""><img src="Assets/playstore.png" alt="playstore"></a>
+                <a href=""><img src="Assets/appstore.png" alt="appstore"></a>
+            </div>
+        </div>
+
+        <!--footer right-->
+        <div style="display: flex; width: 55%;">
+            <div style="width: 30%;line-height: 35px;">
+                <div>Careers</div>
+                <div>Become supliers</div>
+                <div>Site map</div>
+            </div>
+
+            <div style="width: 30%;">
+                <span class="footer_titles">Reach out to us</span>
+                <div class="medialinks">
+                    <a href=""><img src="Assets/instagram.svg" alt="instagram icon"/></a>
+                    <a href=""><img src="Assets/Xmedia.svg" alt="Xmedia icon"/></a>
+                    <a href=""><img src="Assets/facebook.svg" alt="facebook icon"/></a>
+                    <a href=""><img src="Assets/whatsapp.svg" alt="whatsapp icon"></a>
+                </div>
+            </div>
+
+            <div style="width: 50%;">
+                <span class="footer_titles">Contact us</span>
+                <div  style="font-size: 11pt;line-height: 25px; margin-top: 15px;">Fashnear Technologies Private Limited,<br>CIN: U74900KA2015PTC082263<br>3rd Floor, Wing-E, Helios Business Park, 
+                    Kadubeesanahalli Village, Varthur Hobli,
+                     Outer Ring Road Bellandur, Bangalore, 
+                    Bangalore South, Karnataka, India, 560103 <br>E-mail address: query@buycart.com <br> &copy; 2024 buycart.com</div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

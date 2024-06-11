@@ -1,0 +1,422 @@
+@font-face{
+    font-family: "Montserrat-regular";
+    src: url("Assets/fonts/woff_woff2/Montserrat-Regular.woff") format('woff'),
+    url("Assets/fonts/woff_woff2/Montserrat-Regular.woff2") format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face{
+    font-family: "Montserrat-semibold";
+    src: url("Assets/fonts/woff_woff2/Montserrat-SemiBold.woff") format('woff'),
+    url("Assets/fonts/woff_woff2/Montserrat-SemiBold.woff2") format('woff2');
+}
+@font-face{
+    font-family: "Montserrat-medium";
+    src: url("Assets/fonts/woff_woff2/Montserrat-Medium.woff") format('woff'),
+    url("Assets/fonts/woff_woff2/Montserrat-Medium.woff2") format('woff2');
+}
+
+body{
+    margin: 0;
+    font-family: 'Montserrat-regular';
+   
+}
+img{
+    display: block;
+    width: 100%;
+}
+
+div.section_wrapper{
+    padding: 0px 120px 25px 120px;
+    font-family: 'Montserrat-regular';
+    
+}
+
+div.header{
+    display: flex;
+    padding: 20px 120px ;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0px;
+    z-index: 5;
+    background-color:#FFFFFFCC;
+    
+}
+div.logo_searchbar{
+    display: flex;
+    gap:55px;
+    align-items: center;
+    width: 50%;
+}
+div.logo_searchbar > h1{
+    margin: 0px;
+    width: 40px;
+}
+div.search{
+    border: solid 1px #f4e7e7;
+    display: flex;
+    padding: 15px;
+    border-radius: 10px;
+    width: 70%;
+    background-color: white;
+}
+div.search > span{
+    display: inline-block;
+    width: 25px;
+}
+div.search > input{
+    background-color: inherit;
+    border: none;
+    font-size: 13pt;
+    padding: 0px;
+    margin-left: 10px;
+    width: inherit;
+    
+}
+div.search > input:focus{
+    outline: none;
+}
+
+div.links{
+    display: flex;
+    gap: 70px;
+}
+div.links > a{
+    display: inline-flex;
+    font-size: 12pt;
+    color: #7B7B75;
+    cursor: pointer;
+    text-decoration: none;
+}
+div.links > a > span{
+    margin-right: 5px;
+    width: 20px;
+}
+
+.slider{
+    position: relative;
+    height: fit-content;
+    margin-top: 45px;
+}
+.sliderarrowleft{
+    width: 50px;
+    display: inline-block;
+    position: absolute;
+    z-index: 1;
+    top:45%;
+    left:2%;
+    cursor: pointer;
+}
+.sliderarrowright{
+    width: 50px;
+    display: inline-block;
+    position: absolute;
+    right: 2%;
+    bottom: 45%;
+    cursor: pointer;
+}
+div.slick-list, div.draggable{
+    border-radius: 25px;
+}
+div.slick-slide{
+    position: relative;
+}
+div.niketext{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    padding: 110px 0px 0px 110px;
+}
+div.watchtext{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    padding-left: 620px;
+    padding-top: 125px;
+}
+div.sonytext{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    padding-left: 110px;
+    padding-top:145px ;
+}
+
+div.scrolling_imgs{
+    display: flex;
+    width: 100%;
+    overflow: auto;
+    scrollbar-width: none;
+    gap: 15px;
+    margin-top: 60px;
+}
+div.img_container{
+    width: 175px;
+}
+div.img_container > img{
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+div.img_caption {
+    background-color: #F2F2F2;
+    font-size: 12pt;
+    color: #7B7B75;
+    padding: 10px 20px;
+    text-align: center;
+    font-family: 'Montserrat-medium';
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+div.img_txt_container > span{
+    position: absolute;
+    display: inline-block;
+    width: 30px;
+    right: 60px;
+    top: 55px;
+    cursor: pointer;
+
+}
+
+div.img_txt_container{
+    position: relative;
+    background-color: #FEFEFE;
+    padding: 25px;
+    border-radius: 15px;
+    border: #EDEDED solid 0.5px;
+}
+div.img_container2{
+    width: 320px;
+}
+div.img_caption2{
+    margin-top: 30px;
+    line-height: 30px;
+}
+
+div.jbltext{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    bottom: 15%;
+    left: 7%;
+}
+
+div.img_container2 > img{
+    border-radius: 10px;
+}
+
+div.text_container{
+    display: flex; 
+    justify-content: space-between; 
+    position: absolute;
+    bottom: 20px;
+    left: 35px;
+    color: white;
+    width: 80%;
+    padding: 15px 30px;
+    border-radius: 10px;
+    align-items: center;
+    cursor: pointer;
+}
+
+div.tailoredthread_text{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    padding-left: 120px;
+    padding-top: 150px;
+}
+
+
+div.star_container > span{
+    width: 20px;
+}
+
+table{
+    margin-top: 60px;
+    border-spacing: 10px;
+    margin-bottom: 100px;
+}
+td{
+    position: relative;
+    overflow: hidden;
+}
+td > div.rayban{
+    position: absolute;
+    padding: 10px; 
+    background-color: #FFFFFF20;
+    bottom: -70px   ; 
+    width: 80%;
+    font-size: 15pt;
+    text-align: center;
+    border-radius: 5px;
+    color: white;
+    left:20px;
+    transition: bottom 0.7s ease;
+    cursor: pointer;
+}
+td:hover .rayban{
+    bottom: 20px;
+}
+td > div.cannon{
+    display: flex;
+    position: absolute;
+    align-items: center;
+    padding: 10px 15px;
+    border-radius: 5px;
+    width: fit-content;
+    background-color: #FFFFFF88;
+    right: 20px;
+    bottom: -45px;
+    transition: bottom 0.7s ease;
+    cursor: pointer;
+    font-size: 11pt;
+}
+td:hover .cannon{
+    bottom: 20px;   
+}
+
+div.fashion1{
+    position: absolute;
+    font-family: 'Montserrat-medium';
+    color: #2D2D2C;
+    bottom: 60px;
+    left: 70px;
+    background-color: #FFFFFFDD;
+    border-radius: 5px;
+    padding: 20px 10px;
+    width: 70%;
+    text-align: center;
+    transition: bottom 0.7s ease;
+}
+td:hover .fashion1{
+    bottom: 100px;
+}
+div.fashion2{
+    display: flex;
+    position: absolute;
+    align-items: center;
+    padding: 10px 20px;
+    border-radius: 5px;
+    width: fit-content;
+    background-color: #FFFFFF88;
+    left: 250px;
+    bottom: -41px;
+    transition: bottom 0.7s;
+    cursor: pointer;
+    font-family: 'Montserrat-medium';
+    font-size: 11pt;
+}
+td:hover .fashion2{
+    bottom: 20px;
+}
+
+div.americantourister1{
+    position: absolute;
+    left: 40px;
+    top: 110px;
+    transition: top 0.7s ease;
+}
+td:hover .americantourister1{
+    top: 70px;
+}
+div.americantourister2{
+    display: flex;
+    position: absolute;
+    align-items: center;
+    padding: 10px 20px;
+    border-radius: 5px;
+    width: fit-content;
+    background-color: #FFFFFF88;
+    left: 40px;
+    bottom: -45px;
+    transition: bottom 0.7s;
+    cursor: pointer;
+}
+td:hover .americantourister2{
+    bottom: 60px;
+}
+
+div.titles{
+    color: #41413F;
+    font-size: 15pt;
+    font-family: 'Montserrat-medium';
+    margin-top: 45px;
+    margin-bottom: 20px;
+}
+div.contents{
+    color: #7B7B75;
+    font-size: 12pt;
+    line-height: 25px;
+}
+
+div.footer{
+    padding: 20px 120px;
+    background-color: #F7F7ED;
+    color: #2D2D2C;
+    display: flex;
+    justify-content: space-between;
+
+}
+span.footer_titles{
+    font-family: 'Montserrat-medium';
+}
+div.medialinks{
+    display: flex;
+    margin-top: 15px;
+    width: fit-content;
+    gap: 10px;
+}
+div.medialinks > a{
+    width: 15px;
+}
+div.footer_right_columns{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: fit-content;
+}
+
+
+div.dropdown{
+    position: fixed;
+    top: 100px;
+    right: 120px;
+    background-color: #FCFCFC;
+    border-radius: 15px;
+    width: 15%;
+    padding: 20px;
+    
+}
+a{
+    text-decoration: none;
+}
+a.dropdown_content{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: solid 0.5px #EDEDED;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    margin-top: 15px;
+    color: #7B7B75;
+    font-size: 11pt;
+}
+a.dropdown_content:hover{
+    background-color: #e3e3dc;
+}
+span.dropdown_icons{
+    width: 20px;
+    margin-right: 10px;
+}
+
+#dropdownwrapper{
+    position: fixed;
+    left: 0;
+    z-index: 100; 
+    background-color: #0000001A; 
+    width: 100%; 
+    height: 100%;
+    display: none;
+}

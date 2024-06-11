@@ -1,0 +1,174 @@
+<html>
+<head>
+    <title>Cart</title>
+    <link rel="icon" href="Assets/logo.svg" type="image/x-icon">
+    <link rel="stylesheet" href="cart_style.css"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+    <style>
+         @font-face{
+        font-family: "Montserrat-semibold";
+        src: url("Assets/fonts/woff_woff2/Montserrat-SemiBold.woff") format('woff'),
+        url("Assets/fonts/woff_woff2/Montserrat-SemiBold.woff2") format('woff2');
+    }
+    @font-face{
+        font-family: "Montserrat-medium";
+        src: url("Assets/fonts/woff_woff2/Montserrat-Medium.woff") format('woff'),
+        url("Assets/fonts/woff_woff2/Montserrat-Medium.woff2") format('woff2');
+    }
+    </style>
+</head>
+<body>
+    
+    <div class="wrapper">
+        
+        <div id="dropdownwrapper">
+            <div class="dropdown">
+                <a href=""  class="dropdown_content">
+                    <div style="display: flex;"><span class="dropdown_icons"><img src="Assets/account.svg" alt="accounticon"></span> <span> Profile</span></div>
+                    <span class="dropdown_icons"><img src="Assets/angular_bracket.svg" alt="arrow"></span>
+                </a>
+    
+                <a href=""  class="dropdown_content">
+                    <div style="display: flex;"><span class="dropdown_icons"><img src="Assets/truck_icon.svg" alt="truck icon"></span> <span> My address</span></div>
+                    <span class="dropdown_icons"><img src="Assets/angular_bracket.svg" alt="arrow"></span>
+                </a>
+    
+                <a href=""  class="dropdown_content">
+                    <div style="display: flex;"><span class="dropdown_icons"><img src="Assets/cart.svg" alt="acart icon"></span> <span> My orders</span></div>
+                    <span class="dropdown_icons"><img src="Assets/angular_bracket.svg" alt="arrow"></span>
+                </a>
+    
+                <a href=""  class="dropdown_content">
+                    <div style="display: flex;"><span class="dropdown_icons"><img src="Assets/notification_icon.svg" alt="notification icon"></span> <span>Notification</span></div>
+                    <span class="dropdown_icons"><img src="Assets/angular_bracket.svg" alt="arrow"></span>
+                </a>
+    
+                <a href="login.html"  class="dropdown_content">
+                    <div style="display: flex;"><span class="dropdown_icons"><img src="Assets/logout_icon.svg" alt="logout icon"></span> <span>Logout</span></div>
+                    <span class="dropdown_icons"><img src="Assets/angular_bracket.svg" alt="arrow"></span>
+                </a>
+            </div>
+        </div>
+
+        
+        <div class="header">
+            
+        <!--header left part-->
+        <div class="logo_searchbar">
+            <h1><a href=""><img src="Assets/logo.svg" alt="logo"/></a></h1>        <!--LOGO-->
+            <div class="search">
+                <span><img src="Assets/search.svg" alt="search icon"/></span>
+                <input type="text" name="search" placeholder="Search products">
+            </div>
+        </div>
+
+        <!--header right part-->
+        <div class="links">
+            <div>
+                <span><img src="Assets/wishlist.svg" alt="wishlist icon"/></span>
+               
+            
+            
+                <span><img src="Assets/cart.svg" alt="cart icon"/></span>
+               
+            </div>
+            <div style="align-items: center;" onclick="dropdown()">
+                <span><img src="Assets/account.svg" alt="account icon"></span>
+                Elhan B Thomas
+                <span style="margin-left: 10px;margin-right: 0px; width: 15px;"><img src="Assets/dropdown_arrow.svg" alt="dropdown arroe"></span>
+            </div>
+        </div>
+        </div>
+
+        <div class="section_wrapper"> 
+           
+            
+            <div style="font-family:'Montserrat-medium'; font-size: 18pt;color: #41413F;">Cart</div>
+
+            <!--customer address-->
+            <div class="addressbox">
+                <div>Delivered to - <span style="font-family: 'Montserrat-medium' ;">Avinashi</span>(Tirupur) - <span style="font-family: 'Montserrat-medium';">641 654</span></div>
+                <a href="" style="color: #FFD700; font-family:'Montserrat-medium';">Change</a>
+            </div>
+
+            <!--Main section-->
+            <div class="productandprice">
+                
+                <div class="products">
+                    <div class="productcontainer">
+                        <div class="imageandcount">
+                            <div><img src="Assets/xact.png" alt="helmet"/></div>
+                            <div id="itemcount">
+                                <div  onclick="change('-')" style="cursor: pointer;">-</div>
+                                <div id="count">1</div>
+                                <div onclick="change('+')" style="cursor: pointer;">+</div>
+                            </div>
+                        </div>
+                        
+                        <div class="product_description">
+                            <div style="display: flex; justify-content: space-between;color: #41413F;font-family: 'Montserrat-medium'; font-size: 15pt;"><span>X Act</span> <span>Rs.1,799</span></div>
+                        
+                        <div style="display: flex; flex-direction: column; font-size: 13pt; color: #7B7B75; gap: 10px;">
+                            <span>Be safe when you out with the <span style="color: #41413F; font-family: 'Montserrat-medium';">X Act</span> helmet</span>
+                            <span>362 Ratings</span>
+                            <span>Delivery by Wed April, 12 | <strike>Rs.160</strike> <span style="color: #4EAB2D;">Free</span</span>
+                        </div>
+
+                        <div class="buttons">
+                            <div style="color: #7B7B75;">Add to wishlist</div> <div style="color: #FFD700;">Save for later</div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+
+                <div style="width: 35%;">
+                <div class="price">
+                        <div style="font-family: 'Montserrat-medium'; color: #41413F; font-size: 15pt; border-bottom: 0.5px solid #EDEDED; padding-bottom: 10px;">Price details</div>
+                        <div class="pricedetails">
+                            <div><span>Total price</span> <span class="cost" id="itemprice">Rs.1,799</span></div>
+                            <div><span>Discount on price</span> <span class="cost">Rs.999</span></div>
+                            <div><span>Coupon discount</span> <span style="color: #DAB803; cursor: pointer;">Apply coupon</span></div>
+                            <div><span>Delivery charges</span> <span style="color: #4EAB2D;"><span style="text-decoration: line-through; color:#7B7B75; font-family: 'Montserrat-medium';">Rs.199</span> Free</span></div>
+                            <div><span>Packaging charges</span> <span class="cost">Rs.49</span></div>
+                        </div>
+                        <div style="display: flex;justify-content: space-between; font-family: 'Montserrat-medium'; color: #41413F; font-size: 15pt; border-top: 0.5px solid #EDEDED; padding-top: 10px;">
+                            <span>Total payable</span>
+                            <span id="total">Rs.849</span>
+                        </div>
+                </div>
+
+                    <button class="placeorder">Place order</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+<script>
+    function change(char){
+        var count = parseInt(document.getElementById('count').innerText);
+        if(char == '-' && count>1){    
+            count = count - 1;
+        }
+        else if(char == '+'){
+            count= count + 1;
+        }
+        document.getElementById('count').innerText = count;
+        document.getElementById('itemprice').innerText = "Rs."+count*1799
+        document.getElementById('total').innerText = "Rs."+(count*1799 - 950)
+    }
+
+
+    function dropdown(){
+        var drop = document.getElementById('dropdownwrapper');
+        drop.style.display = 'block';
+
+        drop.addEventListener("click", ()=>{
+            drop.style.display = 'none';
+        });
+    }
+
+</script>
+</html>
+

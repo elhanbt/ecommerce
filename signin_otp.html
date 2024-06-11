@@ -1,0 +1,173 @@
+<html>
+<head>
+    <title>Verification</title>
+    <link rel="icon" href="Assets/logo.svg" type="image/x-icon"/>
+    <style>
+        @font-face{
+            font-family: "Montserrat-regular";
+            src: url("Assets/fonts/woff_woff2/Montserrat-Regular.woff") format('woff'),
+            url("Assets/fonts/woff_woff2/Montserrat-Regular.woff2") format('woff2');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face{
+            font-family: "Montserrat-semibold";
+            src: url("Assets/fonts/woff_woff2/Montserrat-SemiBold.woff") format('woff'),
+            url("Assets/fonts/woff_woff2/Montserrat-SemiBold.woff2") format('woff2');
+        }
+        @font-face{
+            font-family: "Montserrat-medium";
+            src: url("Assets/fonts/woff_woff2/Montserrat-Medium.woff") format('woff'),
+            url("Assets/fonts/woff_woff2/Montserrat-Medium.woff2") format('woff2');
+        }
+
+        .wrapper{
+            padding: 100px 220px;
+            display: flex;
+            align-items: center;
+            font-family: 'Montserrat-regular';
+            gap: 60px;
+        }
+        img{
+            display: block;
+            width: 100%;
+        }
+        div.cart{
+            width: 60%;
+        }
+        div.otp_box{
+            width: 60%;
+            box-shadow: 0px 8px 40px 0px #0000001A;
+            border: #EDEDED solid 1px;
+            border-radius: 15px;
+            padding: 50px;
+            text-align: center;
+        }
+        input:focus{
+            outline: none;
+        }
+        input{
+            background-color: transparent;
+            border: solid 1px #DFDFD6;
+            border-radius: 10px;
+        }
+        div#inputcontainer{
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        .input{
+            width: 15%;
+            text-align: center;
+            padding: 20px;
+            font-size: 16pt;
+            font-family: 'Montserrat-medium';
+            color: #41413F;
+        }
+        #submit{
+            width: 100%;
+            margin-top: 60px;
+            background-color: #7B7B75;
+            color: white;
+            font-family: 'Montserrat-semibold';
+            font-size: 13pt;
+            cursor: pointer;
+            padding: 20px 0px;
+            border: solid 1px #DFDFD6;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div  class="cart"><img src="Assets/shoppingcart.png" alt="shopping cart"/></div>
+        <div class="otp_box">
+            <span style="color: #7B7B75;font-size: 12pt;">Enter otp</span>   
+                <form action="signinform.html" id="form">
+                <div id="inputcontainer">
+                    <input class="input" type="text" placeholder="__" maxlength="1"/>
+
+                    <input class="input" type="text" placeholder="__" maxlength="1"/>
+
+                    <input class="input" type="text" placeholder="__"  maxlength="1"/>
+
+                    <input class="input" type="text" placeholder="__" maxlength="1"/>
+                </div>
+                <span style="color: #BABABA; font-size: 10pt;">OTP will send to your registered mobile number</span>
+
+                <div style="margin-bottom: 10px;">
+                    <button type="submit" id="submit" disabled>Sign in </button>
+                </div>
+                <span style="font-size: 10pt;color: #7B7B75;">Didn't receive OTP? <a href="" style="text-decoration: none; color: #FFD700;">Resend</a></span>
+                </form>
+        </div>
+    </div>
+</body>
+
+<script>
+    const inputs = document.getElementById('inputcontainer');
+    inputs.addEventListener('keyup',function(e){
+        const target = e.target;
+        const val = target.value;
+        if(isNaN(val)){
+            target.val = "";
+            return;
+        }
+        if(val != ""){
+            const next = target.nextElementSibling;
+            if(next){
+                next.focus();
+            }
+        }
+    });
+
+    inputs.addEventListener('keyup',function(e){
+        const target = e.target;
+        const key = e.key.toLowerCase();
+
+        if(key == 'backspace' || key == 'delete'){
+            target.value = "";
+            const previous = target.previousElementSibling;
+            if(previous){
+                previous.focus();
+            }
+        }
+    });
+
+
+    document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('form');
+    const fields = form.querySelectorAll('input');
+    const submitBtn = document.getElementById('submit');
+    fields.forEach(number => {
+        number.addEventListener('input', validateForm);
+    });
+
+    function validateForm() {
+        let allFilled = true;
+
+        fields.forEach(number => {
+            if (number.value.trim() === '') {
+                allFilled = false;
+            }
+        });
+
+        if(!allFilled){
+            submitBtn.style.backgroundColor = '#7B7B75';
+            submitBtn.disabled = true;
+            submitBtn.style.color = 'white';
+        }
+        else{
+            submitBtn.style.backgroundColor = '#FFD900';
+            submitBtn.disabled = false;
+            submitBtn.style.color = '#4C4C4C';
+        }
+    }
+});
+
+    
+
+</script>
+</html>
