@@ -50,19 +50,19 @@ div.logo_searchbar{
     display: flex;
     gap:55px;
     align-items: center;
-    width: 50%;
+
 }
 div.logo_searchbar > h1{
     margin: 0px;
-    width: 40px;
+    
 }
 div.search{
     border: solid 1px #f4e7e7;
     display: flex;
     padding: 15px;
     border-radius: 10px;
-    width: 70%;
     background-color: white;
+    width: 100%;
 }
 div.search > span{
     display: inline-block;
@@ -108,10 +108,7 @@ div.addressbox{
     color: #B0B0AD;
     justify-content: space-between;
 }
-div.products{
-    
-    width: 65%;
-}
+
 div.productcontainer{
     display: flex;
     gap: 20px;
@@ -162,6 +159,8 @@ div.productandprice{
     gap: 10px;
 }
 
+
+
 div.price{
     padding: 25px;
     
@@ -206,7 +205,7 @@ div.dropdown{
     right: 120px;
     background-color: #FCFCFC;
     border-radius: 15px;
-    width: 15%;
+
     padding: 20px;
     
 }
@@ -237,4 +236,45 @@ span.dropdown_icons{
     width: 100%; 
     height: 100%;
     display: none;
+}
+
+@media (max-width:1143px){
+    .productandprice{
+        flex-direction: column;
+    }
+    .products, .price_container{
+        width: 100%;
+    }
+}
+
+@media (min-width:1143px){
+    .products{
+        width: 65%;
+    }
+    .price_container{
+        width: 35%;
+    }
+}
+
+@media (max-width:958px){
+    .dropdown{
+        width: fit-content;
+    }
+}
+
+@media (min-width:958px) {
+    .dropdown{
+        width: 15%;
+    }
+}
+
+@media (max-width:886px){
+    #username{ display: none;}
+    .search{ width: fit-content;}
+    .logo_searchbar{ width: fit-content;}
+}
+
+@media (min-width:886px){
+    .search{ width: 70%;}
+    .logo_searchbar{width: 50%;}
 }
