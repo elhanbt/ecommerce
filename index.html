@@ -23,7 +23,25 @@
     
     
     <div id="dropdownwrapper">
-        <div class="dropdown">
+        
+        <div class="dropdown2" id="drop2">
+            <a href="">
+                <span><img src="Assets/wishlist.svg" alt="wishlist icon"/></span>
+                Wishlist
+            </a>
+            <a href="cart.html">
+                <span><img src="Assets/cart.svg" alt="cart icon"/></span>
+                Cart
+            </a>
+            <a style="align-items: center;" onclick="dropdown('1')">
+                <span><img src="Assets/account.svg" alt="account icon"></span>
+                Elhan B Thomas
+                <span style="margin-left: 10px;margin-right: 0px; width: 15px;"><img src="Assets/dropdown_arrow.svg" alt="dropdown arroe"></span>
+            </a >
+        </div>
+
+
+        <div class="dropdown" id="drop1">
             <a href=""  class="dropdown_content">
                 <div style="display: flex;"><span class="dropdown_icons"><img src="Assets/account.svg" alt="accounticon"></span> <span> Profile</span></div>
                 <span class="dropdown_icons"><img src="Assets/angular_bracket.svg" alt="arrow"></span>
@@ -72,28 +90,33 @@
                 <span><img src="Assets/cart.svg" alt="cart icon"/></span>
                 Cart
             </a>
-            <a onclick="dropdown()" style="align-items: center;">
+            <a onclick="dropdown('1')" style="align-items: center;">
                 <span><img src="Assets/account.svg" alt="account icon"></span>
                 Elhan B Thomas
                 <span style="margin-left: 10px;margin-right: 0px; width: 15px;"><img src="Assets/dropdown_arrow.svg" alt="dropdown arroe"></span>
             </a >
         </div>
+        
+        <div class="menu" onclick="dropdown('2')" id="menu">
+            <img src="Assets/menu.svg" alt="menu button"/>
+        </div>
+
     </div>
 
     <div class="section_wrapper">              
 
         <!--Slider-->
         <div class="slider">
-            <div>                 <!--Watch--> 
+            <div style="position: relative;">                 <!--Watch--> 
                 <div class="watchtext">
-                    <span style="display: inline-block;width: 110px;"><img src="Assets/sonata.svg" alt="sonata logo"/></span>
-                    <span style="color:#A1947F; font-size: 25px; margin-top: 35px;">Light leather</span>
-                    <span style="color: #986F30; font-size: 45px; font-family: 'Montserrat-medium';margin-top: 10px;">#On Trend</span>
-                    <span style="font-size: 11pt; color: #B0ABA3; display: inline-block; width: 74%; margin-top: 20px;">"Capture every moment in timeless style with our elegant timepieces. Embrace sophistication and never miss a beat with our exquisitely crafted watches."</span>
-                    <div style="color: #737373; font-size: 11pt; margin-top: 35px;">
+                    <span style="display: inline-block;width: 7vw;"><img src="Assets/sonata.svg" alt="sonata logo"/></span>
+                    <span style="color:#A1947F; font-size: 1.8vw; margin-top: 5%;">Light leather</span>
+                    <span style="color: #986F30; font-size: 4vw; font-family: 'Montserrat-medium';margin-top: 2%;">#On Trend</span>
+                    <span style="font-size: 1vw; color: #B0ABA3; display: inline-block; width: 74%; margin-top: 2%;">"Capture every moment in timeless style with our elegant timepieces. Embrace sophistication and never miss a beat with our exquisitely crafted watches."</span>
+                    <div style="color: #737373; font-size: 1vw; margin-top: 5%;">
                         <span>This summer, stay on trend with</span> <span style="font-family: 'Montserrat-semibold';"> #Light leather</span>
                     </div>
-                    <span style="color: #737373; font-size: 11pt;">A minimalist design</span>
+                    <span style="color: #737373; font-size: 1vw;">A minimalist design</span>
                 </div>
                 
                 <div><img src="Assets/george_jenson.png" alt="watch"/></div>
@@ -101,13 +124,13 @@
             
             <div>
                 <div class="niketext">          <!--Shoes-->
-                    <span style="font-size: 16pt;color: #e9e6e6f2;">New Arrival</span>
-                    <div style="font-family:'Montserrat-semibold';font-size: 32pt; margin-top: 10px;">
+                    <span style="font-size: 2vw;color: #e9e6e6f2;">New Arrival</span>
+                    <div style="font-family:'Montserrat-semibold';font-size: 3.5vw; margin-top: 2%;">
                         <span style="color: white;">SPECIAL</span> <span>COLLECTIONS</span>
                     </div>
-                    <span style="color:#e9e6e6f2;font-size: 14pt;margin-top: 35px;display: inline-block;width: 45%;">"Eperience unparalleled quality and timeless elegance with our meticulously designed footwear range."</span>
-                    <div style="margin-top: 35px;;">
-                        <span style="color: white;font-size: 17pt;">Offer for every purchase</span> <span style="color: white;font-size: 45pt;font-family: 'Montserrat-semibold'; ">@2,499/-</span><span style="color: white;font-size: 7pt;">*TC</span>
+                    <span style="color:#e9e6e6f2;font-size: 1.5vw;margin-top: 5%;display: inline-block;width: 45%;">"Eperience unparalleled quality and timeless elegance with our meticulously designed footwear range."</span>
+                    <div style="margin-top: 2%;;">
+                        <span style="color: white;font-size: 1.5vw;">Offer for every purchase</span> <span style="color: white;font-size: 5vw;font-family: 'Montserrat-semibold'; ">@2,499/-</span><span style="color: white;font-size: 0.5vw;">*TC</span>
                     </div>
                 </div>
                 <div><img src="Assets/nike.png" alt="nike shoes"></div>
@@ -115,11 +138,11 @@
             
             <div>
                 <div class="sonytext">
-                    <span style="display: inline-block;width: 240px;"><img src="Assets/sony.svg" alt="sony logo"></span>
-                    <span style="color:#737373;font-size: 17pt;margin-top: 45px; ">Where words fail</span>
-                    <span style="font-family: 'Montserrat-semibold';color:#027498;font-size: 35pt;margin-top: 30px;">Music speaks</span>
-                    <div style="margin-top: 20px;">
-                        <span style="color: #07d5d578;font-size: 12pt;;">Shop now</span> <span style="font-family: 'Montserrat-medium';color:#737373 ;font-size: 18pt;">in Just @1999/-</span>
+                    <span style="display: inline-block;width: 16vw;"><img src="Assets/sony.svg" alt="sony logo"></span>
+                    <span style="color:#737373;font-size: 1.5vw;margin-top: 15%; ">Where words fail</span>
+                    <span style="font-family: 'Montserrat-semibold';color:#027498;font-size: 3.2vw;margin-top: 10%;">Music speaks</span>
+                    <div style="margin-top: 5%;">
+                        <span style="color: #07d5d578;font-size: 1.2vw;;">Shop now</span> <span style="font-family: 'Montserrat-medium';color:#737373 ;font-size: 2vw;">in Just @1999/-</span>
                     </div>
                 </div>
                 <div><img src="Assets/sony_headphone.png" alt="sony speakers"></div>
@@ -190,7 +213,7 @@
                 <span><img class="like_icon" src="Assets/like_icon.svg" alt="like"></span>
                 <div class="img_container2"><img src="Assets/soleluxe.png" alt="shoe"/></div>
                 <div class="img_caption2">
-                    <span style="color: #41413F; font-size: 15pt; font-family: 'Montserrat-medium';">Sole Luxe</span><br/>
+                    <span style="color: #41413F; font-size: 14pt; font-family: 'Montserrat-medium';">Sole Luxe</span><br/>
                     <span style="font-size: 11pt; color: #7B7B75;">Wear a comfort zone</span>
                 </div>
             </div>
@@ -199,7 +222,7 @@
                 <span><img class="like_icon" src="Assets/like_icon.svg" alt="like"></span>
                 <div class="img_container2"><img src="Assets/gems.png" alt="gemstone"/></div>
                 <div class="img_caption2">
-                    <span style="color: #41413F; font-size: 15pt; font-family: 'Montserrat-medium';">Radiant gems</span><br/>
+                    <span style="color: #41413F; font-size: 14pt; font-family: 'Montserrat-medium';">Radiant gems</span><br/>
                     <span style="font-size: 11pt; color: #7B7B75;">Adorn yorself with brilliance</span>
                 </div>
             </div>
@@ -208,7 +231,7 @@
                 <span><img class="like_icon" src="Assets/like_icon.svg" alt="like"></span>
                 <div class="img_container2"><img src="Assets/tailoredstitch.png" alt="t-shirt"/></div>
                 <div class="img_caption2">
-                    <span style="color: #41413F; font-size: 15pt; font-family: 'Montserrat-medium';">Tailored stitch</span><br/>
+                    <span style="color: #41413F; font-size: 14pt; font-family: 'Montserrat-medium';">Tailored stitch</span><br/>
                     <span style="font-size: 11pt; color: #7B7B75;">Style speaks volume</span>
                 </div>
             </div>
@@ -217,7 +240,7 @@
                 <span><img class="like_icon" src="Assets/like_icon.svg" alt="like"></span>
                 <div class="img_container2"><img src="Assets/soleluxe.png" alt="shoe"/></div>
                 <div class="img_caption2">
-                    <span style="color: #41413F; font-size: 15pt; font-family: 'Montserrat-medium';">Sole Luxe</span><br/>
+                    <span style="color: #41413F; font-size: 14pt; font-family: 'Montserrat-medium';">Sole Luxe</span><br/>
                     <span style="font-size: 11pt; color: #7B7B75;">Wear a comfort zone</span>
                 </div>
             </div>
@@ -226,7 +249,7 @@
                 <span><img class="like_icon" src="Assets/like_icon.svg" alt="like"></span>
                 <div class="img_container2"><img src="Assets/tailoredstitch.png" alt="t-shirt"/></div>
                 <div class="img_caption2">
-                    <span style="color: #41413F; font-size: 15pt; font-family: 'Montserrat-medium';">Tailored stitch</span><br/>
+                    <span style="color: #41413F; font-size: 14pt; font-family: 'Montserrat-medium';">Tailored stitch</span><br/>
                     <span style="font-size: 11pt; color: #7B7B75;">Style speaks volume</span>
                 </div>
             </div>
@@ -237,11 +260,11 @@
         <div style="margin-top: 60px;position: relative;">
             <div><img src="Assets/jbl.png" alt="jbl speaker"/></div>
             <div class="jbltext">
-                <span style="font-family: 'Montserrat-semibold'; font-size: 29pt;">Party Without Tickets</span>
-                <span style="font-size: 20pt;margin-top: 30px;font-weight: 400;">Wireless bluetooth</span>
-                <span style="color: #7C7A7A;font-weight: 400; display: inline-block;width: 47%;font-size: 14pt;margin-top: 15px;">You can make your music amazing by customising the light sequences and easily adjust your settings with the JBL Connect app</span>
-                <div style="margin-top: 35px;">    
-                    <span style="font-size: 20pt;">Starting</span> <span style="font-size: 45pt;font-family: 'Montserrat-semibold';">@2,499/-</span>
+                <span style="font-family: 'Montserrat-semibold'; font-size: 3vw;">Party Without Tickets</span>
+                <span style="font-size: 2.5vw;margin-top: 3%;font-weight: 400;">Wireless bluetooth</span>
+                <span style="color: #7C7A7A;font-weight: 400; display: inline-block;width: 47%;font-size: 1vw;margin-top: 1.5%;">You can make your music amazing by customising the light sequences and easily adjust your settings with the JBL Connect app</span>
+                <div style="margin-top: 5%;">    
+                    <span style="font-size: 2.5vw;">Starting</span> <span style="font-size: 5vw;font-family: 'Montserrat-semibold';">@2,499/-</span>
                 </div>
             </div>
         </div>
@@ -254,9 +277,9 @@
                 <span><img class="like_icon" src="Assets/like_icon.svg" alt="like"></span>
                 <div class="img_container2"><img src="Assets/ikea.png" alt="ikea furniture"/></div>
                 <div class="img_caption2">
-                    <span style="color: #41413F; font-size: 15pt; font-family: 'Montserrat-medium';">IKEA</span><br/>
+                    <span style="color: #41413F; font-size: 14pt; font-family: 'Montserrat-medium';">IKEA</span><br/>
                     <span style="font-size: 11pt; color: #7B7B75;">"Transform your space, elevate your living."</span><br/>
-                    <span style="font-size: 15pt; color: #41413F;font-family: 'Montserrat-medium';">Lets order - 10% offer for all products</span>
+                    <span style="font-size: 14pt; color: #41413F;font-family: 'Montserrat-medium';">Lets order - 10% offer for all products</span>
                 </div>
             </div>
 
@@ -264,9 +287,9 @@
                 <span><img class="like_icon" src="Assets/like_icon.svg" alt="like"></span>
                 <div class="img_container2"><img src="Assets/marshal.png" alt="marshal speaker"/></div>
                 <div class="img_caption2">
-                    <span style="color: #41413F; font-size: 15pt; font-family: 'Montserrat-medium';">Marshal</span><br/>
+                    <span style="color: #41413F; font-size: 14pt; font-family: 'Montserrat-medium';">Marshal</span><br/>
                     <span style="font-size: 11pt; color: #7B7B75;">Sound revolution</span><br/>
-                    <span style="font-size: 15pt; color: #41413F;font-family: 'Montserrat-medium';">Grab your special offer now...</span>
+                    <span style="font-size: 14pt; color: #41413F;font-family: 'Montserrat-medium';">Grab your special offer now...</span>
                 </div>
             </div>
 
@@ -274,9 +297,9 @@
                 <span><img class="like_icon" src="Assets/like_icon.svg" alt="like"></span>
                 <div class="img_container2"><img src="Assets/denver.png" alt="denver perfume"/></div>
                 <div class="img_caption2">
-                    <span style="color: #41413F; font-size: 15pt; font-family: 'Montserrat-medium';">Denver</span><br/>
+                    <span style="color: #41413F; font-size: 14pt; font-family: 'Montserrat-medium';">Denver</span><br/>
                     <span style="font-size: 11pt; color: #7B7B75;">Feel yor fragrance</span><br/>
-                    <span style="font-size: 15pt; color: #41413F;font-family: 'Montserrat-medium';">75% off for all premium members</span>
+                    <span style="font-size: 14pt; color: #41413F;font-family: 'Montserrat-medium';">75% off for all premium members</span>
                 </div>
             </div>
 
@@ -284,9 +307,9 @@
                 <span><img class="like_icon" src="Assets/like_icon.svg" alt="like"></span>
                 <div class="img_container2"><img src="Assets/marshal.png" alt="marshal speaker"/></div>
                 <div class="img_caption2">
-                    <span style="color: #41413F; font-size: 15pt; font-family: 'Montserrat-medium';">Marshal</span><br/>
+                    <span style="color: #41413F; font-size: 14pt; font-family: 'Montserrat-medium';">Marshal</span><br/>
                     <span style="font-size: 11pt; color: #7B7B75;">Sound revolution</span><br/>
-                    <span style="font-size: 15pt; color: #41413F;font-family: 'Montserrat-medium';;">Grab your special offer now...</span>
+                    <span style="font-size: 14pt; color: #41413F;font-family: 'Montserrat-medium';;">Grab your special offer now...</span>
                 </div>
             </div>
 
@@ -294,20 +317,20 @@
                 <span><img class="like_icon" src="Assets/like_icon.svg" alt="like"></span>
                 <div class="img_container2"><img src="Assets/ikea.png" alt="ikea furniture"/></div>
                 <div class="img_caption2">
-                    <span style="color: #41413F; font-size: 15pt; font-family: 'Montserrat-medium';">IKEA</span><br/>
+                    <span style="color: #41413F; font-size: 14pt; font-family: 'Montserrat-medium';">IKEA</span><br/>
                     <span style="font-size: 11pt; color: #7B7B75;">"Transform your space, elevate your living."</span><br/>
-                    <span style="font-size: 15pt; color: #41413F;font-family: 'Montserrat-medium';">Lets order - 10% offer for all products</span>
+                    <span style="font-size: 14pt; color: #41413F;font-family: 'Montserrat-medium';">Lets order - 10% offer for all products</span>
                 </div>
             </div>
         </div>
 
         <!--Helmet and decor-->
-        <div  style="display: flex;margin-top: 60px; gap: 10px;">
+        <div class="twoimgs" style="display: flex;margin-top: 60px; gap: 10px;">
             <div style="position: relative;">
                 <div><img src="Assets/helmet.png" alt="helmet"/></div>
                 <div  class="text_container" style="background-color: #FFFFFF26;">
                     <span>40% offer for all helmets</span>
-                    <div style="display: flex; gap: 5px;"><span>Explore</span><span><img src="Assets/arrow-right.svg" alt="right arrow icon"></span></div>
+                    <div style="display: flex; gap: 5px;align-items: center;"><span>Explore</span><span><img src="Assets/arrow-right.svg" alt="right arrow icon"></span></div>
                 </div>
             </div>
             <div>
@@ -315,7 +338,7 @@
                     <div><img src="Assets/decor.png" alt="decorations"></div>
                     <div  class="text_container" style="background-color: #00000059;">
                         <span>60% offer for wall decor products</span>
-                        <div style="display: flex; gap: 5px;"><span>Explore</span><span><img src="Assets/arrow-right.svg" alt="right arrow icon"></span></div>
+                        <div style="display: flex; gap: 5px;align-items: center;"><span>Explore</span><span><img src="Assets/arrow-right.svg" alt="right arrow icon"></span></div>
                     </div>
                 </div>
             </div>
@@ -325,13 +348,13 @@
         <div style="margin-top: 60px;position: relative;">
             <div class="tailoredthread_text">
                 <div style="display: flex; align-items: center; gap: 10px; width: fit-content;">
-                    <span style="width: 80px;"><img src="Assets/tailoredthread_logo.svg" alt="Tailored thread logo"></span>
-                    <span style="font-size: 26pt; color: white;">The Tailored Thread</span>
+                    <span style="width: 5vw;"><img src="Assets/tailoredthread_logo.svg" alt="Tailored thread logo"></span>
+                    <span style="font-size: 2.5vw; color: white;">The Tailored Thread</span>
                 </div>
-                <div style="color: #767575; font-family: 'Montserrat-medium';font-size: 19pt;margin-top: 100px;width: 60%;line-height: 35px;">"Elegance <span style="color: white;">tailored</span> for every occasion Where <span style="color: white;">sophistication</span> meets style"</div>
-                <div style="margin-top: 30px;"><span style="color:#767575 ;font-size: 18pt;">Just</span> <span style="color: white;font-size: 45pt;font-family: 'Montserrat-semibold';">@4,999/-</span></div>
+                <div style="color: #767575; font-family: 'Montserrat-medium';font-size: 1.5vw;margin-top: 10%;width: 60%;line-height: 2vw;">"Elegance <span style="color: white;">tailored</span> for every occasion Where <span style="color: white;">sophistication</span> meets style"</div>
+                <div style="margin-top: 5%;"><span style="color:#767575 ;font-size: 2vw;">Just</span> <span style="color: white;font-size: 5vw;font-family: 'Montserrat-semibold';">@4,999/-</span></div>
             </div>
-            <div><img src="Assets/tailoredthread.png" alt="The Tailored Thread" style="border-radius: 25px;"/></div>
+            <div><img src="Assets/tailoredthread.png" alt="The Tailored Thread" style="border-radius: 1vw;"/></div>
         </div>
         
         <!--Scrolling imgs (Row 4)-->
@@ -341,7 +364,7 @@
                 <div class="img_container2"><img src="Assets/jacket.png" alt="ikea furniture"/></div>
                 <div class="img_caption2">
                     <div style="display: flex; align-items: center; justify-content: space-between;">
-                        <span style="color: #41413F;font-size: 15pt;font-family: 'Montserrat-medium';">Riding Jacket</span>
+                        <span style="color: #41413F;font-size: 14pt;font-family: 'Montserrat-medium';">Riding Jacket</span>
                         <div style="display: flex;" class="star_container">
                             <span><img src="Assets/star_full.svg" alt="star"/></span>
                             <span><img src="Assets/star_full.svg" alt="star"/></span>
@@ -360,7 +383,7 @@
                 <div class="img_container2"><img src="Assets/mouse.png" alt="ikea furniture"/></div>
                 <div class="img_caption2">
                     <div style="display: flex; align-items: center; justify-content: space-between;">
-                        <span style="color: #41413F;font-size: 15pt;font-family: 'Montserrat-medium';">Rat Mouse</span>
+                        <span style="color: #41413F;font-size: 14pt;font-family: 'Montserrat-medium';">Rat Mouse</span>
                         <div style="display: flex;" class="star_container">
                             <span><img src="Assets/star_full.svg" alt="star"/></span>
                             <span><img src="Assets/star_full.svg" alt="star"/></span>
@@ -379,7 +402,7 @@
                 <div class="img_container2"><img src="Assets/bottle.png" alt="ikea furniture"/></div>
                 <div class="img_caption2">
                     <div style="display: flex; align-items: center; justify-content: space-between;">
-                        <span style="color: #41413F;font-size: 15pt;font-family: 'Montserrat-medium';">Water Bottle</span>
+                        <span style="color: #41413F;font-size: 14pt;font-family: 'Montserrat-medium';">Water Bottle</span>
                         <div style="display: flex;" class="star_container">
                             <span><img src="Assets/star_full.svg" alt="star"/></span>
                             <span><img src="Assets/star_full.svg" alt="star"/></span>
@@ -398,7 +421,7 @@
                 <div class="img_container2"><img src="Assets/jacket.png" alt="ikea furniture"/></div>
                 <div class="img_caption2">
                     <div style="display: flex; align-items: center; justify-content: space-between;">
-                        <span style="color: #41413F;font-size: 15pt;font-family: 'Montserrat-medium';">Riding Jacket</span>
+                        <span style="color: #41413F;font-size: 14pt;font-family: 'Montserrat-medium';">Riding Jacket</span>
                         <div style="display: flex;" class="star_container">
                             <span><img src="Assets/star_full.svg" alt="star"/></span>
                             <span><img src="Assets/star_full.svg" alt="star"/></span>
@@ -417,7 +440,7 @@
                 <div class="img_container2"><img src="Assets/mouse.png" alt="ikea furniture"/></div>
                 <div class="img_caption2">
                     <div style="display: flex; align-items: center; justify-content: space-between;">
-                        <span style="color: #41413F;font-size: 15pt;font-family: 'Montserrat-medium';">Rat Mouse</span>
+                        <span style="color: #41413F;font-size: 14pt;font-family: 'Montserrat-medium';">Rat Mouse</span>
                         <div style="display: flex;" class="star_container">
                             <span><img src="Assets/star_full.svg" alt="star"/></span>
                             <span><img src="Assets/star_full.svg" alt="star"/></span>
@@ -438,17 +461,17 @@
                 <td colspan="2">
                     <div><img src="Assets/american_tourister.png" alt="American Tourister" style="border-radius: 15px;"/></div>
                     <div class="americantourister1">
-                        <div style="width: 25%;"><img src="Assets/american_tourister_logo.svg" alt="American Tourister logo"></div style="width: 20%;">
-                        <div style="font-size: 35pt;font-family: 'Montserrat-medium';color: white;margin-top: 30px;">&ldquo;Travel&rdquo;</div>
-                        <div style="color: white; width: 60%;line-height: 30px; margin-top: 10px;">"Embark on your journey with confidence, wherever the road may lead."</div>
+                        <div style="width: 10vw;"><img src="Assets/american_tourister_logo.svg" alt="American Tourister logo"></div style="width: 20%;">
+                        <div style="font-size: 4vw;font-family: 'Montserrat-medium';color: white;margin-top: 5%;">&ldquo;Travel&rdquo;</div>
+                        <div style="color: white; width: 70%;line-height: 1.5vw; margin-top: 2%;font-size: 1vw;">"Embark on your journey with confidence, wherever the road may lead."</div>
                     </div>
-                    <div class="americantourister2">View more <span><img src="Assets/arrow-right-black.svg" alt="right arrow"></span></div>
+                    <div class="americantourister2">View more <span style="width: 2vw;"><img src="Assets/arrow-right-black.svg" alt="right arrow"></span></div>
                 </td> 
                 
                 <td rowspan="2">
                     <div><img src="Assets/Fashion_big.png" alt="Fashion"  style="border-radius: 15px;"/></div>
                     <div class="fashion1">"Dream in elegance, Radiate in sophistication Embrace your moment in every stitch."</div>
-                   <div class="fashion2">Explore <span><img src="Assets/arrow-right-black.svg" alt="arrow right"></span></div>
+                   <div class="fashion2">Explore <span style="width: 2vw;"><img src="Assets/arrow-right-black.svg" alt="arrow right"></span></div>
                 </td>
 
             </tr>
@@ -459,7 +482,7 @@
                 </td>
                 <td>
                     <div><img src="Assets/cannon.png" alt="Cannon Camera"  style="border-radius: 15px;"/></div>
-                    <div class="cannon">See list <span><img src="Assets/arrow-right-black.svg" alt="right arrow"></span></div>
+                    <div class="cannon">See list <span style="width: 2vw;"><img src="Assets/arrow-right-black.svg" alt="right arrow"></span></div>
                 </td>
             </tr>
         </table>
@@ -512,29 +535,29 @@
     <div class="footer">
         
         <!--footer left-->
-        <div style="width: 45%;">
+        <div class="footer_left" >
             <div style="display: flex; align-items: center;gap: 5px;">
-                <h1 style="margin: 0px;"><a href=""><img src="Assets/logo2.svg" alt="logo"/></a></h1>
+                <h1 style="margin: 0px; width: 10%;"><a href=""><img src="Assets/logo2.svg" alt="logo"/></a></h1>
                 <span class="footer_titles">Shop the best products</span>
             </div>
             
-            <div style="font-size: 11pt; width: 57%; margin-top: 15px;">"Discover excellence with every purchase - shop the best products curated just for you."</div>
+            <div style="font-size: 11pt; margin-top: 15px;">"Discover excellence with every purchase - shop the best products curated just for you."</div>
             
-            <div style="display: flex; width: 60%; margin-top: 60px; gap: 10px;">
+            <div style="display: flex; width: 60%; margin-top: 15%; gap: 10px;">
                 <a href=""><img src="Assets/playstore.png" alt="playstore"></a>
                 <a href=""><img src="Assets/appstore.png" alt="appstore"></a>
             </div>
         </div>
 
         <!--footer right-->
-        <div style="display: flex; width: 55%;">
-            <div style="width: 30%;line-height: 35px;">
+        <div class="footer_right" style="display: flex; ">
+            <div style="display: flex;flex-direction: column;gap: 2vw; font-size: 12pt;">
                 <div>Careers</div>
                 <div>Become supliers</div>
                 <div>Site map</div>
             </div>
 
-            <div style="width: 30%;">
+            <div id="reachout">
                 <span class="footer_titles">Reach out to us</span>
                 <div class="medialinks">
                     <a href=""><img src="Assets/instagram.svg" alt="instagram icon"/></a>
@@ -544,9 +567,9 @@
                 </div>
             </div>
 
-            <div style="width: 50%;">
+            <div id="contactus">
                 <span class="footer_titles">Contact us</span>
-                <div  style="font-size: 11pt;line-height: 25px; margin-top: 15px;">Fashnear Technologies Private Limited,<br>CIN: U74900KA2015PTC082263<br>3rd Floor, Wing-E, Helios Business Park, 
+                <div  style="font-size: 10pt;line-height: 20px; margin-top: 15px;">Fashnear Technologies Private Limited,<br>CIN: U74900KA2015PTC082263<br>3rd Floor, Wing-E, Helios Business Park, 
                     Kadubeesanahalli Village, Varthur Hobli,
                      Outer Ring Road Bellandur, Bangalore, 
                     Bangalore South, Karnataka, India, 560103 <br>E-mail address: query@buycart.com <br> &copy; 2024 buycart.com</div>

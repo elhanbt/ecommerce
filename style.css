@@ -27,14 +27,14 @@ img{
 }
 
 div.section_wrapper{
-    padding: 0px 120px 25px 120px;
+    padding: 0px 10% 25px 10%;
     font-family: 'Montserrat-regular';
     
 }
 
 div.header{
     display: flex;
-    padding: 20px 120px ;
+    
     justify-content: space-between;
     align-items: center;
     position: sticky;
@@ -43,11 +43,12 @@ div.header{
     background-color:#FFFFFFCC;
     
 }
+
 div.logo_searchbar{
     display: flex;
-    gap:55px;
+    gap:5%;
     align-items: center;
-    width: 50%;
+
 }
 div.logo_searchbar > h1{
     margin: 0px;
@@ -56,7 +57,7 @@ div.logo_searchbar > h1{
 div.search{
     border: solid 1px #f4e7e7;
     display: flex;
-    padding: 15px;
+    padding: 2%;
     border-radius: 10px;
     width: 70%;
     background-color: white;
@@ -79,9 +80,10 @@ div.search > input:focus{
 }
 
 div.links{
-    display: flex;
+
     gap: 70px;
 }
+
 div.links > a{
     display: inline-flex;
     font-size: 12pt;
@@ -100,7 +102,7 @@ div.links > a > span{
     margin-top: 45px;
 }
 .sliderarrowleft{
-    width: 50px;
+    width: 4%;
     display: inline-block;
     position: absolute;
     z-index: 1;
@@ -109,7 +111,7 @@ div.links > a > span{
     cursor: pointer;
 }
 .sliderarrowright{
-    width: 50px;
+    width: 4%;
     display: inline-block;
     position: absolute;
     right: 2%;
@@ -117,7 +119,7 @@ div.links > a > span{
     cursor: pointer;
 }
 div.slick-list, div.draggable{
-    border-radius: 25px;
+    border-radius: 2vw;
 }
 div.slick-slide{
     position: relative;
@@ -126,21 +128,22 @@ div.niketext{
     position: absolute;
     display: flex;
     flex-direction: column;
-    padding: 110px 0px 0px 110px;
+    top: 20%;
+    left: 10%;
 }
 div.watchtext{
     position: absolute;
     display: flex;
     flex-direction: column;
-    padding-left: 620px;
-    padding-top: 125px;
+    left: 45%;
+    top: 20%;
 }
 div.sonytext{
     position: absolute;
     display: flex;
     flex-direction: column;
-    padding-left: 110px;
-    padding-top:145px ;
+    top: 20%;
+    left: 10%;
 }
 
 div.scrolling_imgs{
@@ -186,9 +189,7 @@ div.img_txt_container{
     border-radius: 15px;
     border: #EDEDED solid 0.5px;
 }
-div.img_container2{
-    width: 320px;
-}
+
 div.img_caption2{
     margin-top: 30px;
     line-height: 30px;
@@ -211,22 +212,35 @@ div.text_container{
     display: flex; 
     justify-content: space-between; 
     position: absolute;
-    bottom: 20px;
-    left: 35px;
+    bottom: 5%;
+    left: 5%;
     color: white;
     width: 80%;
-    padding: 15px 30px;
+    
     border-radius: 10px;
     align-items: center;
     cursor: pointer;
+
+}
+@media (max-width:1130px){
+    .twoimgs{flex-direction: column;}
+    .text_container{padding: 2% 4%; font-size: 2vw;}
+}
+@media (min-width:1130px) {
+    .text_container{padding: 20px 30px;}
+    
 }
 
 div.tailoredthread_text{
     display: flex;
     flex-direction: column;
     position: absolute;
-    padding-left: 120px;
-    padding-top: 150px;
+    left: 10%;
+    top: 20%;
+}
+
+@media (max-width:1230px){
+    .tailoredthreadtext{font-size: smaller;}
 }
 
 
@@ -236,7 +250,7 @@ div.star_container > span{
 
 table{
     margin-top: 60px;
-    border-spacing: 10px;
+    border-spacing: 0.8vw;
     margin-bottom: 100px;
 }
 td{
@@ -245,132 +259,133 @@ td{
 }
 td > div.rayban{
     position: absolute;
-    padding: 10px; 
+    padding: 1%; 
     background-color: #FFFFFF20;
     bottom: -70px   ; 
     width: 80%;
-    font-size: 15pt;
+    font-size: 1.2vw;
     text-align: center;
-    border-radius: 5px;
+    border-radius: 1vw;
     color: white;
-    left:20px;
+    left:8%;
     transition: bottom 0.7s ease;
     cursor: pointer;
 }
 td:hover .rayban{
-    bottom: 20px;
+    bottom: 10%;
 }
 td > div.cannon{
     display: flex;
     position: absolute;
     align-items: center;
-    padding: 10px 15px;
-    border-radius: 5px;
-    width: fit-content;
+    padding: 1% 2%;
+    border-radius:1vw;
     background-color: #FFFFFF88;
-    right: 20px;
+    right: 8%;
     bottom: -45px;
     transition: bottom 0.7s ease;
     cursor: pointer;
-    font-size: 11pt;
+    font-size: 1vw;
 }
 td:hover .cannon{
-    bottom: 20px;   
+    bottom: 10%;   
 }
 
 div.fashion1{
     position: absolute;
     font-family: 'Montserrat-medium';
     color: #2D2D2C;
-    bottom: 60px;
-    left: 70px;
+    bottom: 8%;
+    left: 13%;
     background-color: #FFFFFFDD;
-    border-radius: 5px;
-    padding: 20px 10px;
+    border-radius:1vw;
+    padding: 3% 4%;
     width: 70%;
     text-align: center;
     transition: bottom 0.7s ease;
+    font-size: 1vw;
 }
 td:hover .fashion1{
-    bottom: 100px;
+    bottom: 12%;
 }
 div.fashion2{
     display: flex;
     position: absolute;
     align-items: center;
-    padding: 10px 20px;
-    border-radius: 5px;
-    width: fit-content;
+    padding: 1% 2%;
+    border-radius: 1vw;
     background-color: #FFFFFF88;
-    left: 250px;
-    bottom: -41px;
+    left: 38%;
+    bottom: -50px;
     transition: bottom 0.7s;
     cursor: pointer;
     font-family: 'Montserrat-medium';
-    font-size: 11pt;
+    font-size: 1vw;
 }
 td:hover .fashion2{
-    bottom: 20px;
+    bottom: 4%;
 }
 
 div.americantourister1{
     position: absolute;
-    left: 40px;
-    top: 110px;
+    left: 10%;
+    top: 30%;
     transition: top 0.7s ease;
 }
 td:hover .americantourister1{
-    top: 70px;
+    top: 15%;
 }
 div.americantourister2{
     display: flex;
     position: absolute;
     align-items: center;
-    padding: 10px 20px;
-    border-radius: 5px;
-    width: fit-content;
+    padding: 1% 2%;
+    border-radius:1vw;
     background-color: #FFFFFF88;
-    left: 40px;
-    bottom: -45px;
+    left: 10%;
+    bottom: -50px;
     transition: bottom 0.7s;
     cursor: pointer;
+    font-size: 1vw;
 }
 td:hover .americantourister2{
-    bottom: 60px;
+    bottom: 10%;
 }
 
 div.titles{
     color: #41413F;
-    font-size: 15pt;
+    font-size: 14pt;
     font-family: 'Montserrat-medium';
-    margin-top: 45px;
-    margin-bottom: 20px;
+    margin-top: 30px;
+    margin-bottom: 15px;
 }
 div.contents{
     color: #7B7B75;
-    font-size: 12pt;
+    font-size: 11pt;
     line-height: 25px;
 }
 
 div.footer{
-    padding: 20px 120px;
+    padding: 20px 10%;
     background-color: #F7F7ED;
     color: #2D2D2C;
     display: flex;
     justify-content: space-between;
 
 }
+
 span.footer_titles{
     font-family: 'Montserrat-medium';
+    font-size: 12pt
 }
 div.medialinks{
     display: flex;
     margin-top: 15px;
     width: fit-content;
-    gap: 10px;
+    gap:10px;
 }
 div.medialinks > a{
-    width: 15px;
+    width: 20px;
 }
 div.footer_right_columns{
     display: flex;
@@ -382,12 +397,12 @@ div.footer_right_columns{
 
 div.dropdown{
     position: fixed;
-    top: 100px;
-    right: 120px;
+    right: 10%;
+    
     background-color: #FCFCFC;
     border-radius: 15px;
-    width: 15%;
     padding: 20px;
+    display: none;
     
 }
 a{
@@ -419,4 +434,53 @@ span.dropdown_icons{
     width: 100%; 
     height: 100%;
     display: none;
+}
+.dropdown2{
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    right: 10%;
+    background-color: #FCFCFC;
+    border-radius: 15px;
+    padding: 20px;
+}
+.dropdown2 > a{
+    display: flex;
+    border-bottom: solid 0.5px #EDEDED;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    margin-top: 15px;
+    color: #7B7B75;
+    font-size: 11pt;
+    
+}
+
+@media (max-width:1024px){
+    .footer{flex-direction: column;}
+    .footer_right{flex-direction: column; margin-top: 10%; gap:45px}
+    .links{display: none;}
+    .logo_searchbar{width: 100%;}
+    .header{padding:20px 10%;}
+    div.img_container2{width: 180px;}
+    .dropdown{width: fit-content;top: 15vw;}
+    .dropdown2{top:15vw}
+}
+@media (min-width:1024px){
+    .footer_right{width: 50%; gap: 3vw;}
+    .footer_left{width: 45%;}
+    #contactus{width: 50%;}
+    .links{display: flex;}
+    .menu{display: none;}
+    .logo_searchbar{width: 50%;}
+    .header{padding: 20px 10%;}
+    div.img_container2{width: 300px;}
+    .dropdown{width: 15%;top: 60px;}
+}
+
+@media (max-width:475px){
+    .dropdown{top: 15vw;}
+}
+@media (min-width:475px) and (max-width:1024px){
+    .dropdown{top: 70px}
+    .dropdown2{top:70px}
 }
