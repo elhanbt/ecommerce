@@ -216,19 +216,11 @@ div.text_container{
     left: 5%;
     color: white;
     width: 80%;
-    
+    padding: 2% 4%;
     border-radius: 10px;
     align-items: center;
     cursor: pointer;
 
-}
-@media (max-width:1130px){
-    .twoimgs{flex-direction: column;}
-    .text_container{padding: 2% 4%; font-size: 2vw;}
-}
-@media (min-width:1130px) {
-    .text_container{padding: 20px 30px;}
-    
 }
 
 div.tailoredthread_text{
@@ -238,11 +230,6 @@ div.tailoredthread_text{
     left: 10%;
     top: 20%;
 }
-
-@media (max-width:1230px){
-    .tailoredthreadtext{font-size: smaller;}
-}
-
 
 div.star_container > span{
     width: 20px;
@@ -476,6 +463,17 @@ span.dropdown_icons{
     div.img_container2{width: 300px;}
     .dropdown{width: 15%;top: 60px;}
 }
+
+
+@media (max-width:768px){
+    .twoimgs{flex-direction: column;}
+    .text_container{font-size: 2vw;}
+}
+@media (min-width:768px) {
+    .text_container{font-size: 1.2vw;}
+    
+}
+
 
 @media (max-width:475px){
     .dropdown{top: 15vw;}
