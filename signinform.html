@@ -1,6 +1,7 @@
 <html>
 <head>
     <title>Customer Details</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="icon" href="Assets/logo2.svg" type="image/x-icon">
     <style>
         @font-face{
@@ -22,11 +23,9 @@
         }
 
         .wrapper{
-            padding: 100px 220px;
-            display: flex;
             align-items: center;
             font-family: 'Montserrat-regular';
-            gap: 60px;
+            
         }
         img{
             display: block;
@@ -39,9 +38,7 @@
             width: 60%;
             box-shadow: 0px 8px 40px 0px #0000001A;
             border: #EDEDED solid 1px;
-            border-radius: 15px;
-            padding: 50px;
-        
+            border-radius: 15px;        
         }
         input:focus{
             outline: none;
@@ -50,7 +47,7 @@
             background-color: transparent;
             border: solid 1px #DFDFD6;
             border-radius: 10px;
-            padding: 20px 10px;
+            padding: 15px 10px;
             font-family: 'Montserrat-medium';
             margin: 0;
             width: 100%;
@@ -95,6 +92,17 @@
             padding: 20px 0px;
             border: solid 1px #DFDFD6;
             border-radius: 10px;
+        }
+
+        @media (max-width:1024px){
+            .cart{display: none;}  
+            .detail_box{margin: 0 auto;padding: 10%;}    
+            .wrapper{padding: 50px 0;}
+            .gender_container{flex-direction: column;}
+        }
+        @media (min-width:1024px){
+            .wrapper{gap: 60px; padding: 100px 15%; display: flex}
+            .detail_box{padding: 50px;}
         }
     </style>
 </head>

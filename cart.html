@@ -22,7 +22,25 @@
     <div class="wrapper">
         
         <div id="dropdownwrapper">
-            <div class="dropdown">
+
+            <div class="dropdown2" id="drop2">
+                <a href="">
+                    <span><img src="Assets/wishlist.svg" alt="wishlist icon"/></span>
+                    Wishlist
+                </a>
+                <a href="cart.html">
+                    <span><img src="Assets/cart.svg" alt="cart icon"/></span>
+                    Cart
+                </a>
+                <a style="align-items: center;" onclick="dropdown('1')">
+                    <span><img src="Assets/account.svg" alt="account icon"></span>
+                    Elhan B Thomas
+                    <span style="margin-left: 10px;margin-right: 0px; width: 15px;"><img src="Assets/dropdown_arrow.svg" alt="dropdown arroe"></span>
+                </a >
+            </div>
+    
+
+            <div class="dropdown" id="drop1">
                 <a href=""  class="dropdown_content">
                     <div style="display: flex;"><span class="dropdown_icons"><img src="Assets/account.svg" alt="accounticon"></span> <span> Profile</span></div>
                     <span class="dropdown_icons"><img src="Assets/angular_bracket.svg" alt="arrow"></span>
@@ -55,7 +73,7 @@
             
         <!--header left part-->
         <div class="logo_searchbar">
-            <h1><a href=""><img src="Assets/logo.svg" alt="logo"/></a></h1>        <!--LOGO-->
+            <h1><a href="index.html"><img src="Assets/logo.svg" alt="logo"/></a></h1>        <!--LOGO-->
             <div class="search">
                 <span><img src="Assets/search.svg" alt="search icon"/></span>
                 <input type="text" name="search" placeholder="Search products">
@@ -72,11 +90,15 @@
                 <span><img src="Assets/cart.svg" alt="cart icon"/></span>
                
             </div>
-            <div style="align-items: center;" onclick="dropdown()">
+            <div style="align-items: center;" onclick="dropdown('1')">
                 <span><img src="Assets/account.svg" alt="account icon"></span>
-                <font id="username">Elhan B Thomas</font>
+                Elhan B Thomas
                 <span style="margin-left: 10px;margin-right: 0px; width: 15px;"><img src="Assets/dropdown_arrow.svg" alt="dropdown arroe"></span>
             </div>
+
+        </div>
+        <div class="menu" onclick="dropdown('2')" id="menu">
+            <img src="Assets/menu.svg" alt="menu button"/>
         </div>
         </div>
 
@@ -97,7 +119,7 @@
                 <div class="products">
                     <div class="productcontainer">
                         <div class="imageandcount">
-                            <div><img src="Assets/xact.png" alt="helmet"/></div>
+                            <div id="image"><img src="Assets/xact.png" alt="helmet"/></div>
                             <div id="itemcount">
                                 <div  onclick="change('-')" style="cursor: pointer;">-</div>
                                 <div id="count">1</div>
@@ -108,7 +130,7 @@
                         <div class="product_description">
                             <div style="display: flex; justify-content: space-between;color: #41413F;font-family: 'Montserrat-medium'; font-size: 15pt;"><span>X Act</span> <span>Rs.1,799</span></div>
                         
-                        <div style="display: flex; flex-direction: column; font-size: 13pt; color: #7B7B75; gap: 10px;">
+                        <div style="display: flex; flex-direction: column; font-size: 11pt; color: #7B7B75; gap: 1vw;">
                             <span>Be safe when you out with the <span style="color: #41413F; font-family: 'Montserrat-medium';">X Act</span> helmet</span>
                             <span>362 Ratings</span>
                             <span>Delivery by Wed April, 12 | <strike>Rs.160</strike> <span style="color: #4EAB2D;">Free</span</span>
@@ -160,14 +182,33 @@
     }
 
 
-    function dropdown(){
-        var drop = document.getElementById('dropdownwrapper');
-        drop.style.display = 'block';
+    var drop = document.getElementById('dropdownwrapper');
+    var dropdown1 = document.getElementById('drop1');
+    var dropdown2 = document.getElementById('drop2');
 
-        drop.addEventListener("click", ()=>{
-            drop.style.display = 'none';
-        });
+function dropdown(box){
+    drop.style.display = 'block';
+
+    if(box === '2'){
+        dropdown2 .style.display = "flex";
+        dropdown1.style.display = "none";
+     }
+    
+    else if(box === '1'){
+        dropdown1.style.display = "block";
+        dropdown2.style.display = "none";      
     }
+   
+    
+}
+
+drop.addEventListener('click', function(event){
+    if(!dropdown2.contains(event.target)){
+        drop.style.display = 'none';
+    }
+});
+    
+
 
 </script>
 </html>
