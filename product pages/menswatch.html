@@ -1,0 +1,322 @@
+<html>
+<head>
+    <title>Search</title>
+    <link rel="stylesheet" href="search_style.css"/>
+    <link rel="icon" href="assets2/logo.svg" type="image/x-icon">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <style>
+        @font-face{
+        font-family: "Montserrat-semibold";
+        src: url("assets2/fonts/woff_woff2/Montserrat-SemiBold.woff") format('woff'),
+        url("assets2/fonts/woff_woff2/Montserrat-SemiBold.woff2") format('woff2');
+        }
+        @font-face{
+            font-family: "Montserrat-medium";
+            src: url("assets2/fonts/woff_woff2/Montserrat-Medium.woff") format('woff'),
+            url("assets2/fonts/woff_woff2/Montserrat-Medium.woff2") format('woff2');
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div id="dropdownwrapper">
+        
+            <div class="dropdown2" id="drop2">
+                <a href="">
+                    <span><img src="assets2/wishlist.svg" alt="wishlist icon"/></span>
+                    Wishlist
+                </a>
+                <a href="D:\Ruppells\E-commerse\cart.html">
+                    <span><img src="assets2/cart.svg" alt="cart icon"/></span>
+                    Cart
+                </a>
+                <a style="align-items: center;" onclick="dropdown('1')">
+                    <span><img src="assets2/account.svg" alt="account icon"></span>
+                    Elhan B Thomas
+                    <span style="margin-left: 10px;margin-right: 0px; width: 15px;"><img src="assets2/dropdown_arrow.svg" alt="dropdown arroe"></span>
+                </a >
+            </div>
+    
+    
+            <div class="dropdown" id="drop1">
+                <a href=""  class="dropdown_content">
+                    <div style="display: flex;"><span class="dropdown_icons"><img src="assets2/account.svg" alt="accounticon"></span> <span> Profile</span></div>
+                    <span class="dropdown_icons"><img src="assets2/angular_bracket.svg" alt="arrow"></span>
+                </a>
+    
+                <a href=""  class="dropdown_content">
+                    <div style="display: flex;"><span class="dropdown_icons"><img src="assets2/truck_icon.svg" alt="truck icon"></span> <span> My address</span></div>
+                    <span class="dropdown_icons"><img src="assets2/angular_bracket.svg" alt="arrow"></span>
+                </a>
+    
+                <a href=""  class="dropdown_content">
+                    <div style="display: flex;"><span class="dropdown_icons"><img src="assets2/cart.svg" alt="acart icon"></span> <span> My orders</span></div>
+                    <span class="dropdown_icons"><img src="assets2/angular_bracket.svg" alt="arrow"></span>
+                </a>
+    
+                <a href=""  class="dropdown_content">
+                    <div style="display: flex;"><span class="dropdown_icons"><img src="assets2/notification_icon.svg" alt="notification icon"></span> <span>Notification</span></div>
+                    <span class="dropdown_icons"><img src="assets2/angular_bracket.svg" alt="arrow"></span>
+                </a>
+    
+                <a href="D:\Ruppells\E-commerse\login.html"  class="dropdown_content">
+                    <div style="display: flex;"><span class="dropdown_icons"><img src="assets2/logout_icon.svg" alt="logout icon"></span> <span>Logout</span></div>
+                    <span class="dropdown_icons"><img src="assets2/angular_bracket.svg" alt="arrow"></span>
+                </a>
+            </div>
+        </div>
+         <!--Header-->
+         <div class="header">
+                
+            <!--header left part-->
+            <div class="logo_searchbar">
+                <h1><a href=""><img src="assets2/logo.svg" alt="logo"/></a></h1>        <!--LOGO-->
+                <div class="search">
+                    <span><img src="assets2/search.svg" alt="search icon"/></span>
+                    <input type="text" name="search" placeholder="Men's watch">
+                </div>
+            </div>
+    
+            <!--header right part-->
+            <div class="links">
+                <a href="">
+                    <span><img src="assets2/wishlist.svg" alt="wishlist icon"/></span>
+                    Wishlist
+                </a>
+                <a href="cart.html">
+                    <span><img src="assets2/cart.svg" alt="cart icon"/></span>
+                    Cart
+                </a>
+                <a onclick="dropdown('1')" style="align-items: center;">
+                    <span><img src="assets2/account.svg" alt="account icon"></span>
+                    Elhan B Thomas
+                    <span style="margin-left: 10px;margin-right: 0px; width: 15px;"><img src="assets2/dropdown_arrow.svg" alt="dropdown arroe"></span>
+                </a >
+            </div>
+            
+            <div class="menu" onclick="dropdown('2')" id="menu">
+                <img src="assets2/menu.svg" alt="menu button"/>
+            </div>
+    
+        </div>
+
+        <div class="section_wrapper">
+            <!--Heading-->
+            <div id="headandsort">
+                <span id="showresult" style="color: #2D2D2C;font-family: 'Montserrat-medium';">Showing results for Men's watch <span style="color:#7B7B75; font-size: smaller;font-family: 'Montserrat-regular';">(999 results found)</span></span>
+                <div>
+                    <div class="sortbox"><!--Sort options-->
+                        <span style="color:#7B7B75">Sort by: </span> 
+                        <span id="option"> Relevance</span> 
+                        <span style="cursor: pointer;"><img src="assets2/downarrow.svg" alt="arrow" id="arrow"></span>
+                    </div>
+                    <div id="dropoptions">
+                        <div style="border-top-left-radius: 10px;border-top-right-radius: 10px;">Relevance</div>
+                        <div>New arivals</div>
+                        <div>Price (Low to high)</div>
+                        <div>Price (High to low)</div>
+                        <div>Ratings</div>
+                        <div style="border-bottom-right-radius:10px; border-bottom-left-radius: 10px;">Discounts</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="filter_funnel"><button id="filter_img"><img src="assets2/filter.svg" alt=""></button>Filter</div>
+            <div class="contents">
+                
+                <div class="filters" id="filters">
+                   
+                    <div class="filterhead">
+                        <div>Categories</div>
+                        <span class="arrow_icon"><img src="assets2/uparrow.svg" alt="arrow"/></span>
+                    </div>
+                    <div class="filteroptions">
+                        <label><input type="checkbox"><span>Smart watch </span></label>
+                        <label><input type="checkbox"><span>Analog watch</span></label> 
+                        <label><input type="checkbox"><span>Watch gift set</span></label> 
+                        <label><input type="checkbox"><span>Watch straps</span></label> 
+                    </div>
+
+                    <div class="filterhead">
+                        <div>Brand</div>
+                        <span class="arrow_icon"><img src="assets2/uparrow.svg" alt="arrow"/></span>
+                    </div>
+                    <div class="filteroptions">
+                        <label><input type="checkbox"><span>Apple</span></label>
+                        <label><input type="checkbox"><span>Casio </span></label> 
+                        <label><input type="checkbox"><span>Samsung</span></label> 
+                        <label><input type="checkbox"><span>Fossil</span></label>
+                        <label><input type="checkbox"><span>Sonata</span></label>
+                        <label><input type="checkbox"><span>Titan</span></label> 
+                    </div>
+
+                    <div class="filterhead">
+                        <div>Dial shape</div>
+                        <span class="arrow_icon"><img src="assets2/uparrow.svg" alt="arrow"/></span>
+                    </div>
+                    <div class="filteroptions">
+                        <label><input type="checkbox"><span>Circle</span></label>
+                        <label><input type="checkbox"><span>Oval</span></label> 
+                        <label><input type="checkbox"><span>Rectangle</span></label> 
+                        <label><input type="checkbox"><span>Square</span></label> 
+                    </div>
+
+                    <div class="filterhead">
+                        <div>Discount</div>
+                        <span class="arrow_icon"><img src="assets2/uparrow.svg" alt="arrow"/></span>
+                    </div>
+                    <div class="filteroptions">
+                        <label><input type="checkbox"><span>90% and more</span></label>
+                        <label><input type="checkbox"><span>80% and more</span></label> 
+                        <label><input type="checkbox"><span>70% and more</span></label> 
+                        <label><input type="checkbox"><span>60% and more</span></label> 
+                    </div>
+                </div>
+                <div>
+                    <div id="choices">
+                        <span id="clear" onclick="clearAll()">Clear All</span>
+                    </div>
+
+                    <div class="products_container">
+
+                        <div class="rows">
+                            <div class="watchbox">
+                                <div class="img_box">
+                                    <span class="like"><img src="assets2/like_inactive.svg" alt="like"></span>
+                                    <div style="width: 140px; margin: 0 auto;"><img src="assets2/titan_silver1.png" alt="watch(titan)"></div>
+                                </div>
+
+                                <div>
+                                    <div class="line1">Titan</div>
+                                    <div class="line2">Stylish watch collection for men</div>
+                                    <div class="line3">Rs.1,999</div>
+                                </div>
+                                
+                            </div>
+                        
+                        
+                            <div class="watchbox">
+                                <div class="img_box">
+                                    <span class="like"><img src="assets2/like_inactive.svg" alt="like"></span>
+                                    <div style="width: 140px; margin: 0 auto;"><img src="assets2/titan_silver1.png" alt="watch(titan)"></div>
+                                </div>
+
+                                <div>
+                                    <div class="line1">Titan</div>
+                                    <div class="line2">Stylish watch collection for men</div>
+                                    <div class="line3">Rs.1,999</div>
+                                </div>
+                            </div>
+                        
+                         
+                            <div class="watchbox">
+                                <div class="img_box">
+                                    <span class="like"><img src="assets2/like_inactive.svg" alt="like"></span>
+                                    <div style="width: 140px; margin: 0 auto;"><img src="assets2/titan_silver1.png" alt="watch(titan)"></div>
+                                </div>
+
+                                <div>
+                                    <div class="line1">Titan</div>
+                                    <div class="line2">Stylish watch collection for men</div>
+                                    <div class="line3">Rs.1,999</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="rows">
+                            <div class="watchbox">
+                                <div class="img_box">
+                                    <span class="like"><img src="assets2/like_inactive.svg" alt="like"></span>
+                                    <div style="width: 140px; margin: 0 auto;"><img src="assets2/titan_silver1.png" alt="watch(titan)"></div>
+                                </div>
+
+                                <div>
+                                    <div class="line1">Titan</div>
+                                    <div class="line2">Stylish watch collection for men</div>
+                                    <div class="line3">Rs.1,999</div>
+                                </div>
+                                
+                            </div>
+                        
+                        
+                            <div class="watchbox">
+                                <div class="img_box">
+                                    <span class="like"><img src="assets2/like_inactive.svg" alt="like"></span>
+                                    <div style="width: 140px; margin: 0 auto;"><img src="assets2/titan_silver1.png" alt="watch(titan)"></div>
+                                </div>
+
+                                <div>
+                                    <div class="line1">Titan</div>
+                                    <div class="line2">Stylish watch collection for men</div>
+                                    <div class="line3">Rs.1,999</div>
+                                </div>
+                            </div>
+                        
+                         
+                            <div class="watchbox">
+                                <div class="img_box">
+                                    <span class="like"><img src="assets2/like_inactive.svg" alt="like"></span>
+                                    <div style="width: 140px; margin: 0 auto;"><img src="assets2/titan_silver1.png" alt="watch(titan)"></div>
+                                </div>
+
+                                <div>
+                                    <div class="line1">Titan</div>
+                                    <div class="line2">Stylish watch collection for men</div>
+                                    <div class="line3">Rs.1,999</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="rows">
+                            <div class="watchbox">
+                                <div class="img_box">
+                                    <span class="like"><img src="assets2/like_inactive.svg" alt="like"></span>
+                                    <div style="width: 140px; margin: 0 auto;"><img src="assets2/titan_silver1.png" alt="watch(titan)"></div>
+                                </div>
+
+                                <div>
+                                    <div class="line1">Titan</div>
+                                    <div class="line2">Stylish watch collection for men</div>
+                                    <div class="line3">Rs.1,999</div>
+                                </div>
+                                
+                            </div>
+                        
+                        
+                            <div class="watchbox">
+                                <div class="img_box">
+                                    <span class="like"><img src="assets2/like_inactive.svg" alt="like"></span>
+                                    <div style="width: 140px; margin: 0 auto;"><img src="assets2/titan_silver1.png" alt="watch(titan)"></div>
+                                </div>
+
+                                <div>
+                                    <div class="line1">Titan</div>
+                                    <div class="line2">Stylish watch collection for men</div>
+                                    <div class="line3">Rs.1,999</div>
+                                </div>
+                            </div>
+                        
+                         
+                            <div class="watchbox">
+                                <div class="img_box">
+                                    <span class="like"><img src="assets2/like_inactive.svg" alt="like"></span>
+                                    <div style="width: 140px; margin: 0 auto;"><img src="assets2/titan_silver1.png" alt="watch(titan)"></div>
+                                </div>
+
+                                <div>
+                                    <div class="line1">Titan</div>
+                                    <div class="line2">Stylish watch collection for men</div>
+                                    <div class="line3">Rs.1,999</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+        </div>
+    </div>
+</body>
+
+<script src="search_script.js"></script>
+
+</html>
