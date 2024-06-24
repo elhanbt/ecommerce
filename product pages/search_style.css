@@ -28,7 +28,8 @@ img{
 
 div.section_wrapper{
     font-family: 'Montserrat-regular';
-    margin-top: 5%
+    margin-top: 5%;
+    position: relative;
 }
 
 div.header{
@@ -93,7 +94,6 @@ div.links > a > span{
     width: 20px;
 }
 #headandsort{
-    position: sticky;
     background-color: white;
 }
 div.sortbox{
@@ -112,17 +112,19 @@ div.sortbox{
     color: #2D2D2C;
 }
 #dropoptions{
-    position: sticky;
+    position: absolute;
     font-size: 13pt;
     font-family: 'Montserrat-medium';
     width: 220px;
     display: none;
     background-color: white;
+    z-index: 10;
 }
 #dropoptions > div{
     border-bottom: solid 0.5px #EDEDED;
     padding: 10px;
     cursor: pointer;
+    z-index: 10;
 }
 #dropoptions > div:hover{
     background-color: rgba(255, 214, 227, 0.319);
@@ -191,6 +193,7 @@ span.dropdown_icons{
     display: flex;
     position: relative;
     justify-content: space-between;
+    z-index: 0;
 }
 div.filters{
     height: 62vh;
@@ -267,18 +270,24 @@ div.filter_funnel{
 }
 
 .products_container{
-    width: 75wv;
     display: flex;
+    position: relative;
     flex-direction: column;
     gap: 30px;
+    height: 60vh;
+    overflow: scroll;
+    scrollbar-width: none;
+    
 }
 .rows{
     display: flex;
     gap: 30px;
+    
 }
 .watchbox{
     border: solid 0.5px #EDEDED;
     border-radius: 10px;
+
 }
 .img_box{
     position: relative;
@@ -323,6 +332,7 @@ div.filter_funnel{
     .filter_funnel{cursor: pointer;}
     .rows{flex-direction: column;}
     .watchbox{display: flex; flex-direction: row;gap: 20px;padding: 5%;}
+    .watch{width: auto !important;}
 }
 
 @media (min-width:1024px){
@@ -334,11 +344,11 @@ div.filter_funnel{
     .dropdown{width: 15%;top: 60px;}
     #showresult{font-size: 2vw;}
     #headandsort{display: flex;justify-content: space-between;}
-    #dropoptions{right: 5%; top:30%;}
+    #dropoptions{right: 0; top: 100%;}
     .filters{width: 12vw;display: block;}
     #filter_img{border:none; background-color: transparent;}
     .like{right: 0;}
-    .watchbox{padding: 30px;}
+    .watchbox{padding: 30px; width: 33%;}
 }
 
 @media (max-width:475px){
